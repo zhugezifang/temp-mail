@@ -54,13 +54,13 @@ function setLoading(isLoading) {
  */
 function updateSystemStatus(status) {
     // Remove existing status classes
-    elements.statusLed.classList.remove('online', 'offline', 'loading');
+    //elements.statusLed.classList.remove('online', 'offline', 'loading');
     
     // Add the new status class
-    elements.statusLed.classList.add(CONFIG.STATUS[status].class);
+    //elements.statusLed.classList.add(CONFIG.STATUS[status].class);
     
     // Update the status text
-    elements.statusText.textContent = CONFIG.STATUS[status].text;
+    //elements.statusText.textContent = CONFIG.STATUS[status].text;
 }
 
 /**
