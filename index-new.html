@@ -1,0 +1,568 @@
+<!--------------------------------
+    Author: Mehmet Kahya
+    Created: 17 March 2024
+    Last Updated: 31 January 2025
+-------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="default-src 'self' https://api.guerrillamail.com https://cdnjs.cloudflare.com ws://127.0.0.1:* wss://127.0.0.1:*; connect-src 'self' https://api.guerrillamail.com ws://127.0.0.1:* wss://127.0.0.1:*; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src https://cdnjs.cloudflare.com; img-src 'self' data: https:;"
+    />
+    <title>TempMail</title>
+    <meta
+      name="description"
+      content="TempMail ile geçici e-posta adresi oluşturun. Gelen kutunuzu spam ve gereksiz maillerden koruyun. Hızlı ve güvenli geçici e-posta hizmeti."
+    />
+    <meta
+      name="keywords"
+      content="temp mail, geçici e-posta, email spam engelleme, hızlı geçici mail, güvenli e-posta"
+    />
+    <meta name="author" content="Mehmet Kahya" />
+
+    <!-- Open Graph Meta Etiketleri Başlangıcı -->
+    <meta property="og:title" content="TempMail - Geçici Mail Adresiniz" />
+    <meta
+      property="og:description"
+      content="TempMail ile geçici e-posta adresi oluşturun. Gelen kutunuzu spam ve gereksiz maillerden koruyun. Hızlı ve güvenli geçici e-posta hizmeti."
+    />
+    <meta
+      property="og:image"
+      content="https://mehmetkahya0.github.io/temp-mail/images/temp-mail-og-image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://mehmetkahya0.github.io/temp-mail/"
+    />
+    <meta property="og:type" content="website" />
+    <!-- Open Graph Meta Etiketleri Sonu -->
+    <link rel="canonical" href="https://mehmetkahya0.github.io/temp-mail/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Twitter Card Meta Etiketleri Başlangıcı -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TempMail - Geçici Mail Adresiniz" />
+    <meta
+      name="twitter:description"
+      content="TempMail ile geçici e-posta adresi oluşturun. Gelen kutunuzu spam ve gereksiz maillerden koruyun. Hızlı ve güvenli geçici e-posta hizmeti."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mehmetkahya0.github.io/temp-mail/images/temp-mail-twitter-image.png"
+    />
+    <!-- Twitter Card Meta Etiketleri Sonu -->
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="images/temp-mail-icon.png" type="image/x-icon" />
+    
+    <script id="_wau776">
+      var _wau = _wau || [];
+      _wau.push(["dynamic", "0pakxqe3b2", "776", "c4302bffffff", "small"]);
+    </script>
+    <script async src="//waust.at/d.js"></script>
+    <!-- Add confetti lib -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- Custom styles for theme switching and special effects -->
+    <style>
+      .dark {
+        color-scheme: dark;
+      }
+      
+      /* Theme toggle switch styles */
+      .theme-switch input[type="checkbox"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .theme-switch .slider {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        background-color: #ccc;
+        border-radius: 24px;
+        transition: 0.4s;
+      }
+      
+      .theme-switch .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.4s;
+      }
+      
+      .theme-switch input:checked + .slider {
+        background-color: #3b82f6;
+      }
+      
+      .theme-switch input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+      
+      /* Status LED animation */
+      .status-led {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+      }
+      
+      .status-led.online {
+        background-color: #10b981;
+        box-shadow: 0 0 10px #10b981;
+        animation: pulse 2s infinite;
+      }
+      
+      .status-led.offline {
+        background-color: #ef4444;
+        box-shadow: 0 0 10px #ef4444;
+      }
+      
+      @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; }
+      }
+      
+      /* Loading spinner */
+      .spinner {
+        width: 40px;
+        height: 40px;
+        margin: 20px auto;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Welcome message animations */
+      .welcome-message {
+        animation: slideIn 0.5s ease forwards;
+      }
+      
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes slideOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto p-4">
+      <!-- Theme Switch -->
+      <div class="theme-switch fixed top-4 right-4 z-50 flex items-center gap-2 bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg">
+        <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider round"></span>
+        </label>
+        <i class="fa-solid fa-sun text-yellow-500"></i>
+      </div>
+
+      <!-- Header -->
+      <header class="text-center py-8">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
+          <div class="font-mono text-xs sm:text-sm text-blue-600 dark:text-blue-400 whitespace-pre overflow-x-auto">
+            <pre>
+              ████████╗███████╗███╗   ███╗██████╗     ███╗   ███╗ █████╗ ██╗██╗     
+              ╚══██╔══╝██╔════╝████╗ ████║██╔══██╗    ████╗ ████║██╔══██╗██║██║     
+                 ██║   █████╗  ██╔████╔██║██████╔╝    ██╔████╔██║███████║██║██║     
+                 ██║   ██╔══╝  ██║╚██╔╝██║██╔═══╝     ██║╚██╔╝██║██╔══██║██║██║     
+                 ██║   ███████╗██║ ╚═╝ ██║██║         ██║ ╚═╝ ██║██║  ██║██║███████╗
+                 ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝         ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
+            </pre>
+          </div>
+          <div class="flex items-center justify-center mt-4">
+            <div id="status-led" class="status-led offline"></div>
+            <span id="status-text" class="text-gray-600 dark:text-gray-400 font-medium">Offline</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Update Notification -->
+      <div id="update-notification" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl mx-4 relative">
+          <div class="p-6 text-center">
+            <span class="text-lg font-bold text-gray-800 dark:text-white">
+              Temp Mail V2 is out🔥 <br />
+              Check new features🚀 <br />
+              <br />
+              ⬇️ Please rate the new UI ⬇️
+            </span>
+
+            <!-- Poll for user feedback -->
+            <div class="mt-6">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc3IsMzVudebwEwWFRHBQnVf6Frxliya4A5wATDKN_u4s3c0g/viewform?embedded=true"
+                width="100%"
+                height="500"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                class="rounded"
+                >Yükleniyor…</iframe>
+            </div>
+          </div>
+
+          <button id="close-notification" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl w-8 h-8 flex items-center justify-center">
+            &times;
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="space-y-6">
+        <!-- Email Controls Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+          <div class="space-y-4">
+            <!-- Email Input Group -->
+            <div class="relative">
+              <i class="fa-solid fa-at absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input 
+                id="addr" 
+                placeholder="Email address" 
+                readonly 
+                class="w-full pl-10 pr-12 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <button
+                onclick="copyEmail()"
+                title="Copy email"
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
+              >
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </div>
+            
+            <!-- Button Group -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button 
+                onclick="refreshMail()" 
+                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <i class="fa-solid fa-rotate"></i> Load Mail
+              </button>
+              <button 
+                onclick="genEmail()" 
+                class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <i class="fa-solid fa-wand-magic-sparkles"></i> New Address
+              </button>
+            </div>
+            
+            <!-- Auto Refresh -->
+            <div class="flex items-center justify-between">
+              <label class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <input type="checkbox" id="auto-refresh" class="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500" />
+                <span>Auto refresh</span>
+              </label>
+              <select id="refresh-interval" class="border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="10">10s</option>
+                <option value="30">30s</option>
+                <option value="60">1m</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email List Card -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+          <!-- Search Container -->
+          <div class="mb-4">
+            <div class="relative">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              <input
+                type="text"
+                id="email-search"
+                placeholder="Search emails..."
+                class="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+          </div>
+
+          <!-- Loading Spinner -->
+          <div id="loading-spinner" class="spinner hidden"></div>
+          
+          <!-- Error Message -->
+          <div id="error-message" class="hidden text-red-600 dark:text-red-400 text-center py-4"></div>
+
+          <!-- Email Table -->
+          <div class="overflow-x-auto">
+            <table id="emails" class="w-full">
+              <thead>
+                <tr class="border-b border-gray-200 dark:border-gray-700">
+                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
+                    <i class="fa-solid fa-hashtag mr-2"></i> ID
+                  </th>
+                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
+                    <i class="fa-solid fa-user mr-2"></i> From
+                  </th>
+                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
+                    <i class="fa-solid fa-envelope mr-2"></i> Subject
+                  </th>
+                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
+                    <i class="fa-solid fa-calendar mr-2"></i> Date
+                  </th>
+                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
+                    <i class="fa-solid fa-gear mr-2"></i> Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-12 py-8">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+          <div class="text-center space-y-4">
+            <p class="text-gray-600 dark:text-gray-400">
+              <i class="fa-solid fa-code mr-2"></i>
+              Mehmet Kahya - 2025 - TempMail V2 -
+              <a href="https://www.guerrillamail.com" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">
+                <i class="fa-solid fa-link mr-1"></i> guerrillamail.com
+              </a>
+            </p>
+
+            <div class="flex justify-center space-x-4">
+              <a
+                href="mailto:mehmetkahyakas5@gmail.com"
+                target="_blank"
+                title="Email"
+                class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </a>
+              <a
+                href="https://github.com/mehmetkahya0"
+                target="_blank"
+                title="GitHub"
+                class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/mehmet-kahya-0861a4286"
+                target="_blank"
+                title="LinkedIn"
+                class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                <i class="fa-brands fa-linkedin text-xl"></i>
+              </a>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+              <button 
+                class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2" 
+                onclick="showWarning()"
+              >
+                <i class="fa-solid fa-triangle-exclamation"></i> Warning Note
+              </button>
+
+              <a
+                href="privacy/privacy.html"
+                target="_blank"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 no-underline"
+              >
+                <i class="fa-solid fa-shield"></i> Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Welcome Message Modal -->
+    <div id="welcomeMessage" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md mx-4 p-6">
+        <div class="text-center">
+          <div class="flex items-center justify-center gap-2 mb-4">
+            <i class="fas fa-info-circle text-blue-600 dark:text-blue-400 text-2xl"></i>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Welcome to Temp Mail</h3>
+          </div>
+          
+          <div class="text-gray-600 dark:text-gray-300 text-left space-y-3">
+            <p><strong>If you see a "failed to load" message:</strong></p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Try clicking the "New Address" button multiple times</li>
+              <li>
+                If the issue persists, please contact me on GitHub or LinkedIn
+              </li>
+            </ul>
+            <p class="text-center">Thank you for using my project! ❤️</p>
+          </div>
+          
+          <div class="mt-6">
+            <button 
+              onclick="hideWelcomeMessage()" 
+              class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+            >
+              Got it!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showWarning() {
+        alert(
+          "⚠️ This project is purely for educational purposes. We do not allow illegal things to be done with this project and we are not responsible for any incidents that may occur. This project uses mail.gw's API for creating temporary emails. Use it legally and responsibly ⚠️"
+        );
+      }
+    </script>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+      
+      // Check for saved theme or default to light
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      if (savedTheme === 'dark') {
+        html.classList.add('dark');
+        themeToggle.checked = true;
+      }
+      
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          html.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          html.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+      
+      function hideWelcomeMessage() {
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        welcomeMessage.style.animation = "slideOut 0.5s ease forwards";
+        
+        // Create confetti explosion
+        confetti({
+          particleCount: 150,
+          spread: 180,
+          origin: { y: 0.8 },
+          colors: ['#3B82F6', '#60A5FA', '#2563EB', '#10B981', '#34D399'],
+          startVelocity: 45,
+          gravity: 1.2,
+          scalar: 0.7,
+          ticks: 150
+        });
+
+        setTimeout(() => {
+          welcomeMessage.classList.add('hidden');
+          localStorage.setItem("welcomeMessageSeen", "true");
+        }, 500);
+      }
+
+      // Close notification functionality
+      document.getElementById('close-notification')?.addEventListener('click', () => {
+        document.getElementById('update-notification').classList.add('hidden');
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Only show welcome message if not seen before
+        if (!localStorage.getItem("welcomeMessageSeen")) {
+          setTimeout(() => {
+            const welcomeMessage = document.getElementById("welcomeMessage");
+            welcomeMessage.classList.remove('hidden');
+            welcomeMessage.classList.add('show');
+          }, 1000);
+        }
+      });
+      
+      // Poll functionality
+      let selectedRating = 0;
+
+      // Handle star click
+      document
+        .querySelectorAll(".star-rating .fa-star")
+        .forEach(function (star) {
+          star.addEventListener("click", function () {
+            selectedRating = parseInt(this.getAttribute("data-value"));
+            highlightStars(selectedRating);
+          });
+
+          star.addEventListener("mouseover", function () {
+            const hoverValue = parseInt(this.getAttribute("data-value"));
+            highlightStars(hoverValue);
+          });
+
+          star.addEventListener("mouseout", function () {
+            highlightStars(selectedRating);
+          });
+        });
+
+      function highlightStars(rating) {
+        document
+          .querySelectorAll(".star-rating .fa-star")
+          .forEach(function (star) {
+            if (parseInt(star.getAttribute("data-value")) <= rating) {
+              star.classList.add("checked");
+            } else {
+              star.classList.remove("checked");
+            }
+          });
+      }
+
+      function submitPoll() {
+        if (selectedRating > 0) {
+          console.log(
+            `User rated the new UI as: ${selectedRating} out of 5`
+          );
+          alert("Thank you for your feedback!");
+          document.querySelector(".poll").style.display = "none";
+        } else {
+          alert("Please select a rating before submitting.");
+        }
+      }
+    </script>
+
+    <script src="js/config.js" type="module"></script>
+    <script src="js/api.js" type="module"></script>
+    <script src="js/theme.js" type="module"></script>
+  </body>
+</html>
