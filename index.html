@@ -155,181 +155,401 @@
                  ╚═╝   ╚══════╝╚═╝     ╚═╝╚═╝         ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
             </pre>
           </div>
-          
-          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Temporary Email Service
-          </h1>
-          <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            Protect your real email address from spam and unwanted messages. Generate temporary email addresses instantly and receive emails in real-time.
-          </p>
-          
-          <div class="flex items-center justify-center mb-6">
-            <div id="status-led" class="status-led offline"></div>
-            <span id="status-text" class="text-gray-600 dark:text-gray-400 font-medium">Offline</span>
-          </div>
 
-          <!-- Features Preview -->
-          <div id="features" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div class="text-center p-4">
-              <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <i class="fa-solid fa-shield-halved text-blue-600 dark:text-blue-400 text-xl"></i>
-              </div>
-              <span class="font-semibold text-gray-900 dark:text-white mb-2">Privacy Protection</span>
-              <p class="text-sm text-gray-600 dark:text-gray-300">Keep your real email address safe from spam and data breaches</p>
-            </div>
-            <div class="text-center p-4">
-              <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <i class="fa-solid fa-bolt text-green-600 dark:text-green-400 text-xl"></i>
-              </div>
-              <span class="font-semibold text-gray-900 dark:text-white mb-2">Instant Generation</span>
-              <p class="text-sm text-gray-600 dark:text-gray-300">Generate temporary email addresses in seconds, no registration required</p>
-            </div>
-            <div class="text-center p-4">
-              <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <i class="fa-solid fa-clock text-purple-600 dark:text-purple-400 text-xl"></i>
-              </div>
-              <span class="font-semibold text-gray-900 dark:text-white mb-2">Real-time Updates</span>
-              <p class="text-sm text-gray-600 dark:text-gray-300">Receive emails instantly with auto-refresh functionality</p>
-            </div>
-          </div>
-        </div>
+          
       </header>
 
-      <!-- Update Notification -->
-      <div id="update-notification" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 hidden">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl mx-4 relative">
-          <div class="p-6 text-center">
-            <span class="text-lg font-bold text-gray-800 dark:text-white">
-              Temp Mail V2 is out🔥 <br />
-              Check new features🚀 <br />
-              <br />
-              ⬇️ Please rate the new UI ⬇️
-            </span>
-
-            <!-- Poll for user feedback -->
-            <div class="mt-6">
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc3IsMzVudebwEwWFRHBQnVf6Frxliya4A5wATDKN_u4s3c0g/viewform?embedded=true"
-                width="100%"
-                height="500"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
-                class="rounded"
-                >Yükleniyor…</iframe>
-            </div>
-          </div>
-
-          <button id="close-notification" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl w-8 h-8 flex items-center justify-center">
-            &times;
-          </button>
-        </div>
-      </div>
-
+      
       <!-- Main Content -->
-      <main class="space-y-6">
-        <!-- Email Controls Card -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <div class="space-y-4">
-            <!-- Email Input Group -->
-            <div class="relative">
-              <i class="fa-solid fa-at absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-              <input 
-                id="addr" 
-                placeholder="Email address" 
-                readonly 
-                class="w-full pl-10 pr-12 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button
-                onclick="copyEmail()"
-                title="Copy email"
-                class="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
-              >
-                <i class="fa-solid fa-copy"></i>
-              </button>
-            </div>
-            
-            <!-- Button Group -->
-            <div class="flex flex-col sm:flex-row gap-3">
-              <button 
-                onclick="refreshMail()" 
-                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <i class="fa-solid fa-rotate"></i> Load Mail
-              </button>
-              <button 
-                onclick="genEmail()" 
-                class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <i class="fa-solid fa-wand-magic-sparkles"></i> New Address
-              </button>
-            </div>
-            
-            <!-- Auto Refresh -->
-            <div class="flex items-center justify-between">
-              <label class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <input type="checkbox" id="auto-refresh" class="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500" />
-                <span>Auto refresh</span>
-              </label>
-              <select id="refresh-interval" class="border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <option value="10">10s</option>
-                <option value="30">30s</option>
-                <option value="60">1m</option>
-              </select>
-            </div>
+      <main class="relative">
+        <!-- Core Function Highlight Background -->
+        <div class="relative bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-indigo-600/5 dark:from-blue-500/10 dark:via-purple-500/10 dark:to-indigo-500/10 rounded-3xl p-8 border-2 border-blue-200/50 dark:border-blue-500/20 shadow-2xl backdrop-blur-sm">
+          <!-- Decorative Elements -->
+          <div class="absolute inset-0 overflow-hidden rounded-3xl">
+            <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-400/20 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-indigo-300/10 rounded-full blur-3xl"></div>
           </div>
-        </div>
-
-        <!-- Email List Card -->
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <!-- Search Container -->
-          <div class="mb-4">
-            <div class="relative">
-              <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-              <input
-                type="text"
-                id="email-search"
-                placeholder="Search emails..."
-                class="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-          </div>
-
-          <!-- Loading Spinner -->
-          <div id="loading-spinner" class="spinner hidden"></div>
           
-          <!-- Error Message -->
-          <div id="error-message" class="hidden text-red-600 dark:text-red-400 text-center py-4"></div>
+          <!-- Core Function Header -->
+          <div class="relative text-center mb-8">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-600 rounded-2xl mb-4 shadow-lg animate-pulse">
+              <i class="fa-solid fa-bolt text-white text-3xl"></i>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent mb-2">
+              Temporary Email Service
+            </h1>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Protect your real email address from spam and unwanted messages. Generate temporary email addresses instantly and receive emails in real-time.
+            </p>
+          </div>
 
-          <!-- Email Table -->
-          <div class="overflow-x-auto">
-            <table id="emails" class="w-full">
-              <thead>
-                <tr class="border-b border-gray-200 dark:border-gray-700">
-                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
-                    <i class="fa-solid fa-hashtag mr-2"></i> ID
-                  </th>
-                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
-                    <i class="fa-solid fa-user mr-2"></i> From
-                  </th>
-                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
-                    <i class="fa-solid fa-envelope mr-2"></i> Subject
-                  </th>
-                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
-                    <i class="fa-solid fa-calendar mr-2"></i> Date
-                  </th>
-                  <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
-                    <i class="fa-solid fa-gear mr-2"></i> Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-              </tbody>
-            </table>
+          <div class="space-y-8">
+            <!-- Email Controls Card -->
+            <div class="relative group">
+              <!-- Glow effect -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+              
+              <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-blue-100 dark:border-gray-700 p-8 backdrop-blur-sm">
+                <!-- Card Header -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <i class="fa-solid fa-envelope text-white text-xl"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-bold text-gray-900 dark:text-white">Email Control Panel</h3>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">Manage your temporary email address</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="px-3 py-1 rounded-full text-sm font-medium" id="control-panel-status">
+                      <i class="status-led offline" id="status-led"></i>
+                      <span id="status-text">Offline</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="space-y-6">
+                  <!-- Email Input Group -->
+                  <div class="relative group">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      <i class="fa-solid fa-at mr-2 text-blue-600 dark:text-blue-400"></i>
+                      Current Email Address
+                    </label>
+                    <div class="relative">
+                      <input 
+                        id="addr" 
+                        placeholder="Click Generate New Address button to get email..." 
+                        readonly 
+                        class="w-full pl-12 pr-14 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 text-gray-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 font-mono text-lg"
+                      />
+                      <i class="fa-solid fa-at absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-500 dark:text-blue-400"></i>
+                      <button
+                        onclick="copyEmail()"
+                        title="Copy email"
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 p-2.5 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 bg-white dark:bg-gray-700 rounded-lg shadow-sm hover:shadow-md"
+                      >
+                        <i class="fa-solid fa-copy"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <!-- Button Group -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <button 
+                      onclick="refreshMail()" 
+                      class="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                      <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                      <i class="fa-solid fa-rotate group-hover:rotate-180 transition-transform duration-500"></i> 
+                      <span>Load Mail</span>
+                    </button>
+                    <button 
+                      onclick="genEmail()" 
+                      class="relative overflow-hidden bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                      <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                      <i class="fa-solid fa-wand-magic-sparkles group-hover:scale-110 transition-transform duration-300"></i> 
+                      <span>New Address</span>
+                    </button>
+                  </div>
+                  
+                  <!-- Auto Refresh Settings -->
+                  <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-200 dark:border-gray-600">
+                    <div class="flex items-center justify-between">
+                      <label class="flex items-center gap-3 text-gray-700 dark:text-gray-300 cursor-pointer group">
+                        <div class="relative">
+                          <input type="checkbox" id="auto-refresh" class="sr-only" />
+                          <div class="w-6 h-6 border-2 border-gray-300 dark:border-gray-500 rounded-md transition-all duration-200 group-hover:border-blue-500"></div>
+                          <i class="fa-solid fa-check absolute inset-0 w-6 h-6 text-blue-600 opacity-0 transition-opacity duration-200"></i>
+                        </div>
+                        <i class="fa-solid fa-arrows-rotate text-blue-600 dark:text-blue-400"></i>
+                        <span class="font-medium">Auto refresh emails</span>
+                      </label>
+                      <select id="refresh-interval" class="border-2 border-gray-200 dark:border-gray-600 rounded-lg px-4 py-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300">
+                        <option value="10">Every 10s</option>
+                        <option value="30">Every 30s</option>
+                        <option value="60">Every 1m</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email List Card -->
+            <div class="relative group">
+              <!-- Glow effect -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+              
+              <div class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-purple-100 dark:border-gray-700 p-8 backdrop-blur-sm">
+                <!-- Card Header -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <i class="fa-solid fa-inbox text-white text-xl"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-bold text-gray-900 dark:text-white">Inbox</h3>
+                      <p class="text-sm text-gray-600 dark:text-gray-400">View received emails</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-full text-sm font-medium">
+                      <i class="fa-solid fa-envelope text-blue-500 text-xs mr-1"></i>
+                      <span id="email-count">0</span> emails
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Search Container -->
+                <div class="mb-6">
+                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <i class="fa-solid fa-magnifying-glass mr-2 text-purple-600 dark:text-purple-400"></i>
+                    Search Emails
+                  </label>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="email-search"
+                      placeholder="Enter keywords to search email content..."
+                      class="w-full pl-12 pr-4 py-4 border-2 border-gray-200 dark:border-gray-600 rounded-xl bg-gradient-to-r from-gray-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 text-gray-900 dark:text-white focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500 transition-all duration-300"
+                    />
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500 dark:text-purple-400"></i>
+                  </div>
+                </div>
+
+                <!-- Loading Spinner -->
+                <div id="loading-spinner" class="spinner hidden"></div>
+                
+                <!-- Error Message -->
+                <div id="error-message" class="hidden text-red-600 dark:text-red-400 text-center py-4 bg-red-50 dark:bg-red-900/20 rounded-xl"></div>
+
+                <!-- Email Table -->
+                <div class="overflow-x-auto bg-gray-50 dark:bg-gray-700/50 rounded-xl border border-gray-200 dark:border-gray-600">
+                  <table id="emails" class="w-full">
+                    <thead>
+                      <tr class="border-b border-gray-200 dark:border-gray-600 bg-gradient-to-r from-gray-100 to-purple-100 dark:from-gray-700 dark:to-gray-600">
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                          <i class="fa-solid fa-hashtag mr-2 text-purple-600 dark:text-purple-400"></i> ID
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                          <i class="fa-solid fa-user mr-2 text-blue-600 dark:text-blue-400"></i> From
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                          <i class="fa-solid fa-envelope mr-2 text-green-600 dark:text-green-400"></i> Subject
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                          <i class="fa-solid fa-calendar mr-2 text-orange-600 dark:text-orange-400"></i> Date
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">
+                          <i class="fa-solid fa-gear mr-2 text-gray-600 dark:text-gray-400"></i> Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
+
+      <!-- Why Choose Us -->
+      <div class="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-700 rounded-2xl shadow-xl overflow-hidden mt-12">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 opacity-5 dark:opacity-10">
+          <div class="absolute top-10 left-10 w-32 h-32 bg-blue-400 rounded-full blur-3xl"></div>
+          <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-400 rounded-full blur-3xl"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-300 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative p-8">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6 shadow-lg">
+              <i class="fa-solid fa-crown text-white text-2xl"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-blue-300 bg-clip-text text-transparent mb-4">
+              Why Choose Our Service
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
+              We provide secure, anonymous, and free temporary email services to protect your privacy and eliminate spam from your life.
+            </p>
+            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto"></div>
+          </div>
+          
+          <!-- Service Features -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="group text-center transform hover:scale-105 transition-all duration-300">
+              <div class="relative w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <i class="fa-solid fa-user-secret text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <h3 class="font-bold text-xl text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">Completely Anonymous</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">No account registration required, no personal information needed, use temporary email services completely anonymously</p>
+            </div>
+            
+            <div class="group text-center transform hover:scale-105 transition-all duration-300">
+              <div class="relative w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-2xl group-hover:shadow-green-500/25 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <i class="fa-solid fa-rocket text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <h3 class="font-bold text-xl text-gray-900 dark:text-white mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Lightning Fast</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Generate new temporary email addresses in seconds with just a button click, available instantly</p>
+            </div>
+            
+            <div class="group text-center transform hover:scale-105 transition-all duration-300">
+              <div class="relative w-20 h-20 bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-2xl group-hover:shadow-purple-500/25 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-violet-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <i class="fa-solid fa-shield-check text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <h3 class="font-bold text-xl text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">Secure & Reliable</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Emails are automatically deleted, leaving no traces, ensuring your privacy and data security</p>
+            </div>
+            
+            <div class="group text-center transform hover:scale-105 transition-all duration-300">
+              <div class="relative w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:shadow-2xl group-hover:shadow-orange-500/25 transition-all duration-300">
+                <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <i class="fa-solid fa-globe text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <h3 class="font-bold text-xl text-gray-900 dark:text-white mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">Globally Available</h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Supports email reception worldwide, compatible with all major email service providers</p>
+            </div>
+          </div>
+          
+          <!-- Use Cases -->
+          <div class="mb-16">
+            <div class="text-center mb-10">
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">Common Use Cases</h3>
+              <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Discover practical scenarios where temporary email proves invaluable in daily life</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-user-plus text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-lg text-gray-900 dark:text-white">Website Registration</h4>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Sign up for websites, apps, and forums without exposing your real email to abuse or spam</p>
+              </div>
+              
+              <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-download text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-lg text-gray-900 dark:text-white">File Downloads</h4>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Download files, software, and resources that require email verification while protecting your real address</p>
+              </div>
+              
+              <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-gift text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-lg text-gray-900 dark:text-white">Event Participation</h4>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Participate in online events, contests, and giveaways without receiving subsequent marketing emails</p>
+              </div>
+              
+              <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-eye text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-lg text-gray-900 dark:text-white">Service Trials</h4>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Try various online services and free trial products while protecting your personal information</p>
+              </div>
+              
+              <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-comments text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-lg text-gray-900 dark:text-white">Feedback & Comments</h4>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Leave comments, submit feedback, or contact customer service while protecting your real contact details</p>
+              </div>
+              
+              <div class="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2 transition-all duration-300">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-shield-virus text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-lg text-gray-900 dark:text-white">Security Testing</h4>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Test untrusted websites and verify email security without risking your real email address</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Benefits -->
+          <div class="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 dark:from-blue-800 dark:via-purple-800 dark:to-blue-900 rounded-2xl p-8 text-white overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10">
+              <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+            </div>
+            
+            <div class="relative">
+              <div class="text-center mb-8">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur rounded-full mb-4">
+                  <i class="fa-solid fa-trophy text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4">Benefits of Using Temporary Email</h3>
+                <p class="text-blue-100 max-w-2xl mx-auto">Experience the multiple conveniences and protections our service provides</p>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-start group">
+                  <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-xl mb-2">Privacy Protection</h4>
+                    <p class="text-blue-100 leading-relaxed">Prevent your real email address from being collected, sold, or used for spam marketing</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start group">
+                  <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-xl mb-2">Reduce Spam</h4>
+                    <p class="text-blue-100 leading-relaxed">Effectively prevent spam and promotional emails from entering your primary inbox</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start group">
+                  <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-xl mb-2">Save Time</h4>
+                    <p class="text-blue-100 leading-relaxed">No need to manage and clean up spam emails, saving time on inbox management</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start group">
+                  <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-xl mb-2">Enhanced Security</h4>
+                    <p class="text-blue-100 leading-relaxed">Reduce the risk of your real email being targeted by hackers or data breaches</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- FAQ Section -->
       <section id="faq" class="py-12">
