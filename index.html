@@ -31,6 +31,8 @@
     />
     <link rel="icon" href="images/temp-mail-icon.png" type="image/x-icon" />
     
+    <!-- Custom CSS for email modal and other components -->
+    <link rel="stylesheet" href="css/style.css" />
     
     <!-- Add confetti lib -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -108,6 +110,43 @@
           opacity: 0;
           transform: translateY(-20px);
         }
+      }
+      
+      /* Email modal improvements for modern design */
+      .email-modal {
+        z-index: 9999 !important;
+      }
+      
+      .email-modal-content {
+        max-width: 800px !important;
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+        border-radius: 1rem !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+      }
+      
+      .email-modal .close-btn {
+        top: 1rem !important;
+        right: 1rem !important;
+        z-index: 10 !important;
+        border-radius: 0.5rem !important;
+        padding: 0.5rem !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .email-modal .email-body {
+        max-height: 400px !important;
+        overflow-y: auto !important;
+        padding: 1rem !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 0.5rem !important;
+        background-color: #f9fafb !important;
+      }
+      
+      .dark .email-modal .email-body {
+        background-color: #1f2937 !important;
+        border-color: #374151 !important;
+        color: #f9fafb !important;
       }
     </style>
   </head>
@@ -203,10 +242,7 @@
                     </div>
                   </div>
                   <div class="flex items-center gap-2">
-                    <div class="px-3 py-1 rounded-full text-sm font-medium" id="control-panel-status">
-                      <i class="status-led offline" id="status-led"></i>
-                      <span id="status-text">Offline</span>
-                    </div>
+                    
                   </div>
                 </div>
 
