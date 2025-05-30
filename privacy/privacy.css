@@ -267,3 +267,61 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* **Navigation Section Styles** */
+.navigation-section {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.back-home-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    text-decoration: none;
+    color: white;
+}
+
+.back-home-btn:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow);
+}
+
+.back-home-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.back-home-btn:hover i {
+    transform: translateX(-3px);
+}
+
+/* **Responsive Navigation** */
+@media (max-width: 768px) {
+    .navigation-section {
+        padding: 0 1rem;
+    }
+    
+    .back-home-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
