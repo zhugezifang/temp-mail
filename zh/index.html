@@ -17,38 +17,6 @@
       name="description"
       content="使用临时邮箱提供安全且匿名的临时电子邮件服务，告别垃圾邮件，保护您的隐私，免费、安全、私密的一次性邮箱服务！"
     />
-    <meta
-      name="keywords"
-      content="临时邮箱, 一次性邮箱, 垃圾邮件防护, 免费临时邮箱, 安全邮箱服务"
-    />
-    
-    <meta name="author" content="Mehmet Kahya" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="language" content="zh-CN" />
-    <meta name="revisit-after" content="1 days" />
-    <meta name="rating" content="general" />
-    <meta name="distribution" content="global" />
-    <meta name="classification" content="Technology, Email Services, Privacy" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="安全匿名的临时邮件服务 - 临时邮箱" />
-    <meta property="og:description" content="使用临时邮箱提供安全且匿名的临时电子邮件服务，告别垃圾邮件，保护您的隐私，免费、安全、私密的一次性邮箱服务！" />
-    <meta property="og:url" content="https://mehmetkahya0.github.io/temp-mail/zh/" />
-    <meta property="og:site_name" content="临时邮箱 - TempMail" />
-    <meta property="og:image" content="https://mehmetkahya0.github.io/temp-mail/images/temp-mail-og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="临时邮箱 - 安全私密的一次性邮箱服务" />
-    <meta property="og:locale" content="zh_CN" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="安全匿名的临时邮件服务 - 临时邮箱" />
-    <meta name="twitter:description" content="使用临时邮箱提供安全且匿名的临时电子邮件服务，告别垃圾邮件，保护您的隐私，免费、安全、私密的一次性邮箱服务！" />
-    <meta name="twitter:image" content="https://mehmetkahya0.github.io/temp-mail/images/temp-mail-twitter-image.png" />
-    <meta name="twitter:image:alt" content="临时邮箱 - 安全私密的一次性邮箱服务" />
-    <meta name="twitter:site" content="@tempmail" />
 
     <!-- Additional SEO Meta Tags -->
     <link rel="canonical" href="https://mehmetkahya0.github.io/temp-mail/zh/" />
@@ -99,6 +67,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="icon" href="../images/temp-mail-icon.png" type="image/x-icon" />
+    
+    <!-- Custom CSS for email modal and other components -->
+    <link rel="stylesheet" href="../css/style.css" />
     
     <!-- Add confetti lib -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -176,6 +147,117 @@
           opacity: 0;
           transform: translateY(-20px);
         }
+      }
+      
+      /* Email modal improvements for modern design */
+      .email-modal {
+        z-index: 9999 !important;
+      }
+      
+      .email-modal-content {
+        max-width: 800px !important;
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+        border-radius: 1rem !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+      }
+      
+      .email-modal .close-btn {
+        top: 1rem !important;
+        right: 1rem !important;
+        z-index: 10 !important;
+        border-radius: 0.5rem !important;
+        padding: 0.5rem !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .email-modal .email-body {
+        max-height: 400px !important;
+        overflow-y: auto !important;
+        padding: 1rem !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 0.5rem !important;
+        background-color: #f9fafb !important;
+      }
+      
+      .dark .email-modal .email-body {
+        background-color: #1f2937 !important;
+        border-color: #374151 !important;
+        color: #f9fafb !important;
+      }
+      
+      /* Additional modal styles for better UX */
+      .email-modal {
+        backdrop-filter: blur(8px);
+        animation: fadeIn 0.3s ease-out;
+      }
+      
+      .email-modal-content {
+        animation: slideIn 0.3s ease-out;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes slideIn {
+        from { 
+          opacity: 0; 
+          transform: scale(0.95) translateY(-20px); 
+        }
+        to { 
+          opacity: 1; 
+          transform: scale(1) translateY(0); 
+        }
+      }
+      
+      /* Responsive modal styles */
+      @media (max-width: 768px) {
+        .email-modal-content {
+          max-width: 95vw !important;
+          margin: 1rem !important;
+        }
+        
+        .email-modal .p-6 {
+          padding: 1rem !important;
+        }
+        
+        .email-modal .grid-cols-2 {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      
+      /* Scrollbar styling for email content */
+      .email-body::-webkit-scrollbar {
+        width: 6px;
+      }
+      
+      .email-body::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 3px;
+      }
+      
+      .email-body::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 3px;
+      }
+      
+      .email-body::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      
+      .dark .email-body::-webkit-scrollbar-track {
+        background: #374151;
+      }
+      
+      .dark .email-body::-webkit-scrollbar-thumb {
+        background: #6b7280;
+      }
+      
+      .dark .email-body::-webkit-scrollbar-thumb:hover {
+        background: #9ca3af;
       }
     </style>
   </head>
@@ -980,7 +1062,7 @@
     </script>
 
     <script src="../js/config.js" type="module"></script>
-    <script src="../js/api.js" type="module"></script>
+    <script src="js/api-zh.js" type="module"></script>
     <script src="../js/theme.js" type="module"></script>
   </body>
 </html> 
