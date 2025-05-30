@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mehmetkahya0.github.io/temp-mail/sitemap.xml 
+Sitemap: https://tempmailto.online/sitemap.xml 
