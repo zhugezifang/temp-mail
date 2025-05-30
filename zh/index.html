@@ -2,7 +2,7 @@
     Author: Mehmet Kahya
     Created: 17 March 2024
     Last Updated: 31 January 2025
-    中文版本 (Chinese Version)
+    Chinese Version
 -------------------------------->
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -12,49 +12,16 @@
     <meta
       content="default-src 'self' https://api.guerrillamail.com https://cdnjs.cloudflare.com ws://127.0.0.1:* wss://127.0.0.1:*; connect-src 'self' https://api.guerrillamail.com ws://127.0.0.1:* wss://127.0.0.1:*; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src https://cdnjs.cloudflare.com; img-src 'self' data: https:;"
     />
-    <title>临时邮箱 - TempMail</title>
+    <title>临时邮箱</title>
     <meta
       name="description"
-      content="使用TempMail创建临时邮箱地址。保护您的真实邮箱免受垃圾邮件和不必要邮件的困扰。快速安全的临时邮箱服务。"
+      content="使用临时邮箱保护您的真实邮箱地址。免费、安全、私密的一次性邮箱服务，防止垃圾邮件和不必要的消息。"
     />
     <meta
       name="keywords"
-      content="临时邮箱, 一次性邮箱, 垃圾邮件拦截, 快速临时邮箱, 安全邮箱, 匿名邮箱"
+      content="临时邮箱, 一次性邮箱, 垃圾邮件防护, 免费临时邮箱, 安全邮箱服务"
     />
-    <meta name="author" content="Mehmet Kahya" />
-
-    <!-- Open Graph Meta 标签开始 -->
-    <meta property="og:title" content="TempMail - 您的临时邮箱" />
-    <meta
-      property="og:description"
-      content="使用TempMail创建临时邮箱地址。保护您的真实邮箱免受垃圾邮件和不必要邮件的困扰。快速安全的临时邮箱服务。"
-    />
-    <meta
-      property="og:image"
-      content="https://mehmetkahya0.github.io/temp-mail/images/temp-mail-og-image.png"
-    />
-    <meta
-      property="og:url"
-      content="https://mehmetkahya0.github.io/temp-mail/"
-    />
-    <meta property="og:type" content="website" />
-    <!-- Open Graph Meta 标签结束 -->
-    <link rel="canonical" href="https://mehmetkahya0.github.io/temp-mail/" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Twitter Card Meta 标签开始 -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="TempMail - 您的临时邮箱" />
-    <meta
-      name="twitter:description"
-      content="使用TempMail创建临时邮箱地址。保护您的真实邮箱免受垃圾邮件和不必要邮件的困扰。快速安全的临时邮箱服务。"
-    />
-    <meta
-      name="twitter:image"
-      content="https://mehmetkahya0.github.io/temp-mail/images/temp-mail-twitter-image.png"
-    />
-    <!-- Twitter Card Meta 标签结束 -->
-
+    
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -77,43 +44,6 @@
     <style>
       .dark {
         color-scheme: dark;
-      }
-      
-      /* Theme toggle switch styles */
-      .theme-switch input[type="checkbox"] {
-        opacity: 0;
-        width: 0;
-        height: 0;
-      }
-      
-      .theme-switch .slider {
-        position: relative;
-        display: inline-block;
-        width: 50px;
-        height: 24px;
-        background-color: #ccc;
-        border-radius: 24px;
-        transition: 0.4s;
-      }
-      
-      .theme-switch .slider:before {
-        position: absolute;
-        content: "";
-        height: 18px;
-        width: 18px;
-        left: 3px;
-        bottom: 3px;
-        background-color: white;
-        border-radius: 50%;
-        transition: 0.4s;
-      }
-      
-      .theme-switch input:checked + .slider {
-        background-color: #3b82f6;
-      }
-      
-      .theme-switch input:checked + .slider:before {
-        transform: translateX(26px);
       }
       
       /* Status LED animation */
@@ -189,30 +119,20 @@
 
   <body class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
     <div class="max-w-6xl mx-auto p-4">
-      <!-- 主题切换 -->
-      <div class="theme-switch fixed top-4 right-4 z-50 flex items-center gap-2 bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg">
-        <i class="fa-solid fa-moon text-gray-600 dark:text-gray-400"></i>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle" />
-          <span class="slider round"></span>
-        </label>
-        <i class="fa-solid fa-sun text-yellow-500"></i>
-      </div>
-
       <!-- 语言切换 -->
       <div class="fixed top-4 left-4 z-50">
         <div class="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg">
           <div class="flex gap-2">
             <a href="../index.html" class="px-3 py-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">EN</a>
             <span class="text-gray-300 dark:text-gray-600">|</span>
-            <span class="px-3 py-1 text-sm text-blue-600 dark:text-blue-400 font-medium">中文</span>
+            <a href="index.html" class="px-3 py-1 text-sm text-blue-600 dark:text-blue-400 font-medium transition-colors">中文</a>
           </div>
         </div>
       </div>
 
-      <!-- 头部 -->
+      <!-- Header -->
       <header class="text-center py-8">
-        <!-- 导航 -->
+        <!-- Navigation -->
         <nav class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 mb-6">
           <div class="flex flex-col md:flex-row items-center justify-between">
             <div class="flex items-center gap-2 mb-4 md:mb-0">
@@ -228,7 +148,7 @@
           </div>
         </nav>
 
-        <!-- 英雄区域 -->
+        <!-- Hero Section -->
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-6">
           <div class="font-mono text-xs sm:text-sm text-blue-600 dark:text-blue-400 whitespace-pre overflow-x-auto mb-6">
             <pre>
@@ -253,45 +173,45 @@
             <span id="status-text" class="text-gray-600 dark:text-gray-400 font-medium">离线</span>
           </div>
 
-          <!-- 功能预览 -->
+          <!-- Features Preview -->
           <div id="features" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div class="text-center p-4">
               <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <i class="fa-solid fa-shield-halved text-blue-600 dark:text-blue-400 text-xl"></i>
               </div>
-              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">隐私保护</h3>
+              <span class="font-semibold text-gray-900 dark:text-white mb-2">隐私保护</span>
               <p class="text-sm text-gray-600 dark:text-gray-300">保护您的真实邮箱地址免受垃圾邮件和数据泄露的威胁</p>
             </div>
             <div class="text-center p-4">
               <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <i class="fa-solid fa-bolt text-green-600 dark:text-green-400 text-xl"></i>
               </div>
-              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">即时生成</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-300">几秒钟内生成临时邮箱地址，无需注册</p>
+              <span class="font-semibold text-gray-900 dark:text-white mb-2">即时生成</span>
+              <p class="text-sm text-gray-600 dark:text-gray-300">几秒钟内生成临时邮箱地址，无需注册即可使用</p>
             </div>
             <div class="text-center p-4">
               <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-3">
                 <i class="fa-solid fa-clock text-purple-600 dark:text-purple-400 text-xl"></i>
               </div>
-              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">实时更新</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-300">通过自动刷新功能即时接收邮件</p>
+              <span class="font-semibold text-gray-900 dark:text-white mb-2">实时更新</span>
+              <p class="text-sm text-gray-600 dark:text-gray-300">即时接收邮件，支持自动刷新功能</p>
             </div>
           </div>
         </div>
       </header>
 
-      <!-- 更新通知 -->
+      <!-- Update Notification -->
       <div id="update-notification" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 hidden">
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-2xl mx-4 relative">
           <div class="p-6 text-center">
             <span class="text-lg font-bold text-gray-800 dark:text-white">
-              临时邮箱 V2 发布了🔥 <br />
-              查看新功能🚀 <br />
+              临时邮箱 V2 正式发布🔥 <br />
+              体验全新功能🚀 <br />
               <br />
               ⬇️ 请为新界面评分 ⬇️
             </span>
 
-            <!-- 用户反馈问卷 -->
+            <!-- Poll for user feedback -->
             <div class="mt-6">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSc3IsMzVudebwEwWFRHBQnVf6Frxliya4A5wATDKN_u4s3c0g/viewform?embedded=true"
@@ -311,12 +231,12 @@
         </div>
       </div>
 
-      <!-- 主要内容 -->
+      <!-- Main Content -->
       <main class="space-y-6">
-        <!-- 邮箱控制卡片 -->
+        <!-- Email Controls Card -->
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
           <div class="space-y-4">
-            <!-- 邮箱输入组 -->
+            <!-- Email Input Group -->
             <div class="relative">
               <i class="fa-solid fa-at absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
               <input 
@@ -334,7 +254,7 @@
               </button>
             </div>
             
-            <!-- 按钮组 -->
+            <!-- Button Group -->
             <div class="flex flex-col sm:flex-row gap-3">
               <button 
                 onclick="refreshMail()" 
@@ -346,11 +266,11 @@
                 onclick="genEmail()" 
                 class="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
-                <i class="fa-solid fa-wand-magic-sparkles"></i> 新地址
+                <i class="fa-solid fa-wand-magic-sparkles"></i> 生成新地址
               </button>
             </div>
             
-            <!-- 自动刷新 -->
+            <!-- Auto Refresh -->
             <div class="flex items-center justify-between">
               <label class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                 <i class="fa-solid fa-arrows-rotate"></i>
@@ -366,9 +286,9 @@
           </div>
         </div>
 
-        <!-- 邮件列表卡片 -->
+        <!-- Email List Card -->
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <!-- 搜索容器 -->
+          <!-- Search Container -->
           <div class="mb-4">
             <div class="relative">
               <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
@@ -381,19 +301,19 @@
             </div>
           </div>
 
-          <!-- 加载动画 -->
+          <!-- Loading Spinner -->
           <div id="loading-spinner" class="spinner hidden"></div>
           
-          <!-- 错误消息 -->
+          <!-- Error Message -->
           <div id="error-message" class="hidden text-red-600 dark:text-red-400 text-center py-4"></div>
 
-          <!-- 邮件表格 -->
+          <!-- Email Table -->
           <div class="overflow-x-auto">
             <table id="emails" class="w-full">
               <thead>
                 <tr class="border-b border-gray-200 dark:border-gray-700">
                   <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
-                    <i class="fa-solid fa-hashtag mr-2"></i> ID
+                    <i class="fa-solid fa-hashtag mr-2"></i> 编号
                   </th>
                   <th class="text-left py-3 px-4 font-medium text-gray-900 dark:text-white">
                     <i class="fa-solid fa-user mr-2"></i> 发件人
@@ -416,96 +336,96 @@
         </div>
       </main>
 
-      <!-- 常见问题部分 -->
+      <!-- FAQ Section -->
       <section id="faq" class="py-12">
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
           <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
-            常见问题
+            临时邮箱常见问题
           </h2>
           
           <div class="max-w-4xl mx-auto space-y-6">
             <!-- FAQ Item 1 -->
             <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors rounded-lg">
-                <span class="font-semibold text-gray-900 dark:text-white">什么是临时邮箱地址？</span>
+                <h3 class="font-semibold text-gray-900 dark:text-white">什么是临时邮箱地址？</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600 dark:text-gray-300">
-                临时邮箱地址是一个一次性邮箱，您可以用它来接收邮件而不泄露您的真实邮箱地址。它非常适合注册服务、下载文件或任何需要邮箱但不想使用个人邮箱的情况。
+                临时邮箱地址是一次性的邮箱，您可以用它来接收邮件而不暴露您的真实邮箱地址。它非常适合注册服务、下载文件，或任何需要邮箱但不想使用个人邮箱的场合。
               </div>
             </div>
 
             <!-- FAQ Item 2 -->
             <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors rounded-lg">
-                <span class="font-semibold text-gray-900 dark:text-white">临时邮箱能持续多长时间？</span>
+                <h3 class="font-semibold text-gray-900 dark:text-white">临时邮箱能保存多长时间？</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600 dark:text-gray-300">
-                临时邮箱地址通常持续几个小时到几天，具体取决于服务提供商。您收到的邮件会在这段时间后自动删除。这确保了您的隐私并保持服务的整洁。
+                临时邮箱地址通常可以保存几个小时到几天时间，具体取决于服务提供商。您收到的邮件会在这个时间段后自动删除。这确保了您的隐私并保持服务的清洁。
               </div>
             </div>
 
             <!-- FAQ Item 3 -->
             <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors rounded-lg">
-                <span class="font-semibold text-gray-900 dark:text-white">使用临时邮箱服务安全吗？</span>
+                <h3 class="font-semibold text-gray-900 dark:text-white">使用临时邮箱服务安全吗？</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600 dark:text-gray-300">
-                是的，对于非敏感通信，使用临时邮箱服务通常是安全的。但是，避免将其用于重要账户，如银行、社交媒体或工作相关服务，因为您可能需要稍后恢复账户。
+                是的，对于非敏感通信，使用临时邮箱服务通常是安全的。但是，请避免将其用于重要账户，如银行、社交媒体或工作相关服务，因为您可能稍后需要恢复这些账户。
               </div>
             </div>
 
             <!-- FAQ Item 4 -->
             <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors rounded-lg">
-                <span class="font-semibold text-gray-900 dark:text-white">可以从临时地址发送邮件吗？</span>
+                <h3 class="font-semibold text-gray-900 dark:text-white">可以从临时邮箱发送邮件吗？</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600 dark:text-gray-300">
-                大多数临时邮箱服务（包括本服务）仅用于接收邮件。您无法从临时地址发送邮件。如果您需要发送邮件，请考虑使用您的常规邮箱提供商或专门的邮件服务。
+                大多数临时邮箱服务（包括此服务）仅用于接收邮件。您无法从临时邮箱地址发送邮件。如果您需要发送邮件，请考虑使用您的常规邮箱提供商或专用的邮件服务。
               </div>
             </div>
 
             <!-- FAQ Item 5 -->
             <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors rounded-lg">
-                <span class="font-semibold text-gray-900 dark:text-white">你们会存储或记录邮件内容吗？</span>
+                <h3 class="font-semibold text-gray-900 dark:text-white">你们会存储或记录邮件内容吗？</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600 dark:text-gray-300">
-                本服务以隐私为设计理念。我们不会永久存储邮件内容或个人信息。所有邮件会在一定时间后自动删除，我们不会跟踪或记录用户活动，除了基本的服务功能。
+                此服务以隐私为设计理念。我们不会永久存储邮件内容或个人信息。所有邮件都会在一定时间后自动删除，除了基本的服务功能外，我们不会跟踪或记录用户活动。
               </div>
             </div>
 
             <!-- FAQ Item 6 -->
             <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors rounded-lg">
-                <span class="font-semibold text-gray-900 dark:text-white">为什么会看到"加载失败"消息？</span>
+                <h3 class="font-semibold text-gray-900 dark:text-white">为什么会看到"加载失败"的消息？</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600 dark:text-gray-300">
-                "加载失败"消息可能是由于API限制或临时服务器问题造成的。请尝试多次点击"新地址"按钮，或等待几分钟后再试。如果问题持续存在，请通过我们的社交媒体链接联系我们。
+                "加载失败"消息可能是由于API限制或临时服务器问题导致的。请尝试多次点击"生成新地址"按钮，或等待几分钟后再试。如果问题仍然存在，请通过我们的社交媒体链接联系我们。
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 页脚 -->
+      <!-- Footer -->
       <footer id="contact" class="mt-12 py-12">
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-          <!-- 主要页脚内容 -->
+          <!-- Main Footer Content -->
           <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <!-- 关于部分 -->
+            <!-- About Section -->
             <div class="md:col-span-2">
               <div class="flex items-center gap-2 mb-4">
                 <i class="fa-solid fa-envelope text-2xl text-blue-600 dark:text-blue-400"></i>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">临时邮箱</h3>
+                <span class="text-xl font-bold text-gray-900 dark:text-white">临时邮箱</span>
               </div>
               <p class="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
-                一个免费、安全、私密的临时邮箱服务。通过我们的一次性邮箱解决方案保护您的真实邮箱地址免受垃圾邮件和不必要消息的困扰。
+                免费、安全、私密的临时邮箱服务。使用我们的一次性邮箱解决方案保护您的真实邮箱地址免受垃圾邮件和不必要消息的困扰。
               </p>
               <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                 <i class="fa-solid fa-shield-halved"></i>
@@ -513,9 +433,9 @@
               </div>
             </div>
 
-            <!-- 快速链接 -->
+            <!-- Quick Links -->
             <div>
-              <h4 class="font-semibold text-gray-900 dark:text-white mb-4">快速链接</h4>
+              <span class="font-semibold text-gray-900 dark:text-white mb-4">快速链接</span>
               <ul class="space-y-2 text-gray-600 dark:text-gray-300">
                 <li><a href="#features" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">功能特色</a></li>
                 <li><a href="#faq" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">常见问题</a></li>
@@ -524,9 +444,9 @@
               </ul>
             </div>
 
-            <!-- 联系信息 -->
+            <!-- Contact Info -->
             <div>
-              <h4 class="font-semibold text-gray-900 dark:text-white mb-4">联系我们</h4>
+              <span class="font-semibold text-gray-900 dark:text-white mb-4">联系我们</span>
               <div class="space-y-3">
                 <a href="mailto:mehmetkahyakas5@gmail.com" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   <i class="fa-solid fa-envelope"></i>
@@ -536,28 +456,28 @@
             </div>
           </div>
 
-          <!-- 警告和操作 -->
+          <!-- Warning and Actions -->
           <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mb-8">
             <div class="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
               <div class="flex items-start gap-3">
                 <i class="fa-solid fa-triangle-exclamation text-yellow-600 dark:text-yellow-400 mt-1"></i>
                 <div>
-                  <h5 class="font-semibold text-yellow-800 dark:text-yellow-200 mb-1">教育用途声明</h5>
+                  <span class="font-semibold text-yellow-800 dark:text-yellow-200 mb-1">教育目的声明</span>
                   <p class="text-sm text-yellow-700 dark:text-yellow-300">
-                    本项目仅用于教育目的。请负责任和合法地使用。我们不对此服务的任何误用负责。
+                    此项目仅用于教育目的。请负责任和合法地使用。我们不对此服务的任何滥用行为负责。
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 操作按钮 -->
+          <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row justify-center gap-3 mb-8">
             <button 
               class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2" 
               onclick="showWarning()"
             >
-              <i class="fa-solid fa-triangle-exclamation"></i> 查看完整警告
+              <i class="fa-solid fa-triangle-exclamation"></i> 查看完整声明
             </button>
             <a
               href="../privacy/privacy.html"
@@ -574,12 +494,12 @@
             </button>
           </div>
 
-          <!-- 底部页脚 -->
+          <!-- Bottom Footer -->
           <div class="text-center border-t border-gray-200 dark:border-gray-700 pt-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4">
               <p class="text-gray-600 dark:text-gray-400">
                 <i class="fa-solid fa-code mr-2"></i>
-                © 2025 tempmail.online - 临时邮箱 - 保留所有权利
+                © 2025 tempmail.online - 保留所有权利
               </p>
               <div class="flex items-center gap-4">
                 <span class="text-sm text-gray-500 dark:text-gray-400">用</span>
@@ -592,7 +512,7 @@
       </footer>
     </div>
 
-    <!-- 欢迎消息模态框 -->
+    <!-- Welcome Message Modal -->
     <div id="welcomeMessage" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md mx-4 p-6">
         <div class="text-center">
@@ -604,9 +524,9 @@
           <div class="text-gray-600 dark:text-gray-300 text-left space-y-3">
             <p><strong>如果您看到"加载失败"消息：</strong></p>
             <ul class="list-disc list-inside space-y-1">
-              <li>请尝试多次点击"新地址"按钮</li>
+              <li>请尝试多次点击"生成新地址"按钮</li>
               <li>
-                如果问题持续存在，请通过GitHub或LinkedIn联系我
+                如果问题仍然存在，请通过GitHub或LinkedIn联系我
               </li>
             </ul>
             <p class="text-center">感谢您使用我的项目！ ❤️</p>
@@ -617,7 +537,7 @@
               onclick="hideWelcomeMessage()" 
               class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
             >
-              明白了！
+              知道了！
             </button>
           </div>
         </div>
@@ -627,96 +547,19 @@
     <script>
       function showWarning() {
         alert(
-          "⚠️ 此项目纯属教育目的。我们不允许利用此项目进行非法活动，对任何可能发生的事件概不负责。此项目使用mail.gw的API创建临时邮箱。请合法负责地使用 ⚠️"
+          "⚠️ 此项目纯粹用于教育目的。我们不允许使用此项目进行任何非法活动，对于任何可能发生的事件我们概不负责。此项目使用 mail.gw 的 API 创建临时邮箱。请合法和负责任地使用它 ⚠️"
         );
       }
     </script>
 
     <script>
-      // 主题切换功能
-      const themeToggle = document.getElementById('theme-toggle');
-      const html = document.documentElement;
-      
-      // 检查保存的主题或默认为亮色
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      if (savedTheme === 'dark') {
-        html.classList.add('dark');
-        themeToggle.checked = true;
-      }
-      
-      themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-          html.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          html.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-      
-      function hideWelcomeMessage() {
-        const welcomeMessage = document.getElementById("welcomeMessage");
-        welcomeMessage.style.animation = "slideOut 0.5s ease forwards";
-        
-        // 创建彩纸爆炸效果
-        confetti({
-          particleCount: 150,
-          spread: 180,
-          origin: { y: 0.8 },
-          colors: ['#3B82F6', '#60A5FA', '#2563EB', '#10B981', '#34D399'],
-          startVelocity: 45,
-          gravity: 1.2,
-          scalar: 0.7,
-          ticks: 150
-        });
-
-        setTimeout(() => {
-          welcomeMessage.classList.add('hidden');
-          localStorage.setItem("welcomeMessageSeen", "true");
-        }, 500);
-      }
-
-      // 关闭通知功能
+      // Close notification functionality
       document.getElementById('close-notification')?.addEventListener('click', () => {
         document.getElementById('update-notification').classList.add('hidden');
       });
 
-      // FAQ功能
-      document.addEventListener('DOMContentLoaded', () => {
-        // FAQ切换功能
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        
-        faqQuestions.forEach(question => {
-          question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const icon = question.querySelector('.fa-chevron-down');
-            
-            // 切换答案可见性
-            if (answer.classList.contains('hidden')) {
-              answer.classList.remove('hidden');
-              icon.style.transform = 'rotate(180deg)';
-            } else {
-              answer.classList.add('hidden');
-              icon.style.transform = 'rotate(0deg)';
-            }
-          });
-        });
-
-        // 导航链接的平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          });
-        });
-
-        // 仅在之前没有看过欢迎消息时显示
+      document.addEventListener("DOMContentLoaded", () => {
+        // Only show welcome message if not seen before
         if (!localStorage.getItem("welcomeMessageSeen")) {
           setTimeout(() => {
             const welcomeMessage = document.getElementById("welcomeMessage");
@@ -726,10 +569,10 @@
         }
       });
       
-      // 问卷功能
+      // Poll functionality
       let selectedRating = 0;
 
-      // 处理星级点击
+      // Handle star click
       document
         .querySelectorAll(".star-rating .fa-star")
         .forEach(function (star) {
@@ -763,13 +606,71 @@
       function submitPoll() {
         if (selectedRating > 0) {
           console.log(
-            `用户对新界面的评分：${selectedRating} 分（满分5分）`
+            `User rated the new UI as: ${selectedRating} out of 5`
           );
           alert("感谢您的反馈！");
           document.querySelector(".poll").style.display = "none";
         } else {
-          alert("请在提交前选择一个评分。");
+          alert("请在提交前选择评分。");
         }
+      }
+
+      // FAQ functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        // FAQ toggle functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+          question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.fa-chevron-down');
+            
+            // Toggle answer visibility
+            if (answer.classList.contains('hidden')) {
+              answer.classList.remove('hidden');
+              icon.style.transform = 'rotate(180deg)';
+            } else {
+              answer.classList.add('hidden');
+              icon.style.transform = 'rotate(0deg)';
+            }
+          });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      });
+
+      function hideWelcomeMessage() {
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        welcomeMessage.style.animation = "slideOut 0.5s ease forwards";
+        
+        // Create confetti explosion
+        confetti({
+          particleCount: 150,
+          spread: 180,
+          origin: { y: 0.8 },
+          colors: ['#3B82F6', '#60A5FA', '#2563EB', '#10B981', '#34D399'],
+          startVelocity: 45,
+          gravity: 1.2,
+          scalar: 0.7,
+          ticks: 150
+        });
+
+        setTimeout(() => {
+          welcomeMessage.classList.add('hidden');
+          localStorage.setItem("welcomeMessageSeen", "true");
+        }, 500);
       }
     </script>
 
