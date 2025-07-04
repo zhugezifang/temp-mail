@@ -1,0 +1,1132 @@
+<!--------------------------------
+    Author: Mehmet Kahya
+    Created: 17 March 2024
+    Last Updated: 31 January 2025
+-------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="default-src 'self' https://api.guerrillamail.com https://cdnjs.cloudflare.com ws://127.0.0.1:* wss://127.0.0.1:*; connect-src 'self' https://api.guerrillamail.com ws://127.0.0.1:* wss://127.0.0.1:*; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src https://cdnjs.cloudflare.com; img-src 'self' data: https:;"
+    />
+    <title>Temp Mail for Discord - Create Discord Account with Temporary Email</title>
+
+    <meta
+      name="description"
+      content="Complete guide on using temp mail for Discord registration. Learn how to create a Discord account with temporary email to protect your privacy and avoid spam."
+    />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4158779929727637"
+     crossorigin="anonymous"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKEFXS1BE5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NKEFXS1BE5');
+    </script>
+
+    <!-- Additional SEO Meta Tags -->
+    <link rel="canonical" href="https://tempmailto.online/tempmail-discord" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#722ED1',
+                        accent: '#FF4D4F',
+                        dark: '#1D2129',
+                        light: '#F2F3F5',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
+                        'card-hover': '0 20px 40px -5px rgba(0, 0, 0, 0.15)',
+                    }
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .gradient-text {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(135deg, #165DFF, #722ED1);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+    
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="images/temp-mail-icon.png" type="image/x-icon" />
+    
+    <!-- Custom CSS for email modal and other components -->    
+    <!-- Add confetti lib -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+  </head>
+
+  <body class="min-h-screen bg-gray-50 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto p-4">
+      <!-- 语言切换 -->
+      <div class="fixed top-4 left-4 z-50">
+        <div class="bg-white p-2 rounded-lg shadow-lg">
+          <div class="flex gap-2">
+            <a href="https://tempmailto.online/" class="px-3 py-1 text-sm text-blue-600">EN</a>
+            <span class="text-gray-300">|</span>
+            <a href="https://tempmailto.online/zh/" class="px-3 py-1 text-sm text-gray-600 hover:text-blue-600 font-medium">中文</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header class="text-center py-8">
+        <!-- Navigation -->
+        <nav class="bg-white rounded-lg shadow-lg p-4 mb-6">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+              <i class="fa-solid fa-envelope text-2xl text-blue-600"></i>
+              <a href="https://tempmailto.online/" class="text-2xl font-bold text-gray-900">TempMail</a>
+            </div>
+            <div class="flex flex-wrap gap-4">
+              <a href="5minutemail" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">5 Minute Mail</a>
+              <a href="10minutemail" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">10 Minute Mail</a>
+              <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
+              <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a>
+              <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+              <a href="privacy/privacy.html" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">Privacy</a>
+            </div>
+          </div>
+        </nav>
+
+          
+      </header>
+
+      <!-- Hero Section -->
+      <section class="flex items-center justify-center bg-gradient-to-br from-primary/90 to-secondary/90 overflow-hidden">
+      
+        <div class="container mx-auto px-4 z-10 pt-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white leading-tight mb-6">
+                    Create a <span class="text-accent">Discord</span> Account with Temp Mail for Discord
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-2xl mx-auto">
+                    Complete guide on using temp mail for Discord registration. Learn how to create a Discord account with temporary email to protect your privacy and avoid spam.
+                </p>
+                
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" class="w-full h-auto">
+                <path fill="#ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,42.7C1120,32,1280,32,1360,32L1440,32L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z"></path>
+            </svg>
+        </div>
+      </section>
+
+      
+      <!-- Main Content -->
+      <main class="relative mt-8">
+
+        <!-- Core Function Highlight Background -->
+        <div class="relative bg-gradient-to-br from-blue-600/5 via-purple-600/5 to-indigo-600/5 rounded-3xl p-8 border-2 border-blue-200/50 shadow-2xl backdrop-blur-sm">
+          <!-- Decorative Elements -->
+          <div class="absolute inset-0 overflow-hidden rounded-3xl">
+            <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-400/20 rounded-full blur-2xl"></div>
+            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-400/20 rounded-full blur-2xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-indigo-300/10 rounded-full blur-3xl"></div>
+          </div>
+          
+         
+          
+
+          <div class="space-y-8">
+            <!-- Email Controls Card -->
+            <div class="relative group">
+              <!-- Glow effect -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+              
+              <div class="relative bg-white rounded-2xl shadow-xl border border-blue-100 p-8 backdrop-blur-sm">
+                <!-- Card Header -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <i class="fa-solid fa-envelope text-white text-xl"></i>
+                    </div>
+                    <div>
+                      <span class="text-xl font-bold text-gray-900">Email Control Panel</span>
+                      <p class="text-sm text-gray-600">Manage your temporary email address</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    
+                  </div>
+                </div>
+
+                <div class="space-y-6">
+                  <!-- Email Input Group -->
+                  <div class="relative group">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                      <i class="fa-solid fa-at mr-2 text-blue-600"></i>
+                      Current Email Address
+                    </label>
+                    <div class="relative">
+                      <input 
+                        id="addr" 
+                        placeholder="Click Generate New Address button to get email..." 
+                        readonly 
+                        class="w-full pl-12 pr-14 py-4 border-2 border-gray-200 rounded-xl bg-gradient-to-r from-gray-50 to-blue-50 text-gray-900 focus:ring-4 focus:ring-blue-500 transition-all duration-300 font-mono text-lg"
+                      />
+                      <i class="fa-solid fa-at absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-500"></i>
+                      <button
+                        onclick="copyEmail()"
+                        title="Copy email"
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 p-2.5 text-gray-500 hover:text-blue-600 transition-all duration-300 hover:scale-110 bg-white rounded-lg shadow-sm hover:shadow-md"
+                      >
+                        <i class="fa-solid fa-copy"></i>
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <!-- Button Group -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <button 
+                      onclick="refreshMail()" 
+                      class="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                      <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                      <i class="fa-solid fa-rotate group-hover:rotate-180 transition-transform duration-500"></i> 
+                      <span>Load Mail</span>
+                    </button>
+                    <button 
+                      onclick="genEmail()" 
+                      class="relative overflow-hidden bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    >
+                      <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                      <i class="fa-solid fa-wand-magic-sparkles group-hover:scale-110 transition-transform duration-300"></i> 
+                      <span>New Address</span>
+                    </button>
+                  </div>
+                  
+                  <!-- Auto Refresh Settings -->
+                  <div class="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                      <label class="flex items-center gap-3 text-gray-700 cursor-pointer group">
+                        <div class="relative">
+                          <input type="checkbox" id="auto-refresh" class="sr-only" />
+                          <div class="w-6 h-6 border-2 border-gray-300 rounded-md transition-all duration-200 group-hover:border-blue-500"></div>
+                          <i class="fa-solid fa-check absolute inset-0 w-6 h-6 text-blue-600 opacity-0 transition-opacity duration-200"></i>
+                        </div>
+                        <i class="fa-solid fa-arrows-rotate text-blue-600"></i>
+                        <span class="font-medium">Auto refresh emails</span>
+                      </label>
+                      <select id="refresh-interval" class="border-2 border-gray-200 rounded-lg px-4 py-2 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 min-w-0 w-full sm:w-auto">
+                        <option value="10">Every 10s</option>
+                        <option value="30">Every 30s</option>
+                        <option value="60">Every 1m</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email List Card -->
+            <div class="relative group">
+              <!-- Glow effect -->
+              <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+              
+              <div class="relative bg-white rounded-2xl shadow-xl border border-purple-100 p-8 backdrop-blur-sm">
+                <!-- Card Header -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <i class="fa-solid fa-inbox text-white text-xl"></i>
+                    </div>
+                    <div>
+                      <span class="text-xl font-bold text-gray-900">Inbox</span>
+                      <p class="text-sm text-gray-600">View received emails</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    
+                  </div>
+                </div>
+
+                <!-- Search Container -->
+                <div class="mb-6">
+                  <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <i class="fa-solid fa-magnifying-glass mr-2 text-purple-600"></i>
+                    Search Emails
+                  </label>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="email-search"
+                      placeholder="Enter keywords to search email content..."
+                      class="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl bg-gradient-to-r from-gray-50 to-purple-50 text-gray-900 focus:ring-4 focus:ring-purple-500 transition-all duration-300"
+                    />
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500"></i>
+                  </div>
+                </div>
+
+                <!-- Loading Spinner -->
+                <div id="loading-spinner" class="spinner hidden"></div>
+                
+                <!-- Error Message -->
+                <div id="error-message" class="hidden text-red-600 text-center py-4 bg-red-50 rounded-xl"></div>
+
+                <!-- Email Table -->
+                <div class="overflow-x-auto bg-gray-50 rounded-xl border border-gray-200">
+                  <table id="emails" class="w-full">
+                    <thead>
+                      <tr class="border-b border-gray-200 bg-gradient-to-r from-gray-100 to-purple-100">
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900">
+                          <i class="fa-solid fa-hashtag mr-2 text-purple-600"></i> ID
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900">
+                          <i class="fa-solid fa-user mr-2 text-blue-600"></i> From
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900">
+                          <i class="fa-solid fa-envelope mr-2 text-green-600"></i> Subject
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900">
+                          <i class="fa-solid fa-calendar mr-2 text-orange-600"></i> Date
+                        </th>
+                        <th class="text-left py-4 px-6 font-semibold text-gray-900">
+                          <i class="fa-solid fa-gear mr-2 text-gray-600"></i> Actions
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- What is Discord Section -->
+    <section id="what-is-discord" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+              <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-dark mb-6">What is Discord?</h2>
+              <p class="text-lg text-gray-600">The ultimate communication platform for gaming and communities</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="relative">
+                  <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                      <img src="https://images.unsplash.com/photo-1683029096295-7680306aa37d?w=600&h=400&fit=crop" alt="Discord Interface" class="w-full h-auto rounded-2xl">
+                      <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent flex items-end">
+                          <div class="p-6">
+                              <h3 class="text-white font-bold text-xl mb-2">Connect with Communities</h3>
+                              <p class="text-white/90">Join millions of users in voice, video, and text conversations</p>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Decorative Elements -->
+                  <div class="absolute top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+                  <div class="absolute -bottom-10 -left-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+              </div>
+              
+              <div>
+                  <div class="bg-light rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1">
+                      <p class="text-gray-600 mb-6">
+                          Discord is a versatile communication platform originally designed for gamers, now serving millions of users across various communities. With over 200 million monthly active users, Discord enables seamless communication through text, voice, and video channels.
+                      </p>
+                      
+                      <div class="space-y-6">
+                          <div class="flex items-start">
+                              <div class="bg-primary/10 p-3 rounded-full mr-4 mt-1">
+                                  <i class="fa fa-comments text-primary text-xl"></i>
+                              </div>
+                              <div>
+                                  <h3 class="text-xl font-bold mb-2 text-dark">Multi-Channel Communication</h3>
+                                  <p class="text-gray-600">Discord offers text channels, voice chat, and video calls, allowing users to communicate in real-time across different formats within organized servers.</p>
+                              </div>
+                          </div>
+                          
+                          <div class="flex items-start">
+                              <div class="bg-secondary/10 p-3 rounded-full mr-4 mt-1">
+                                  <i class="fa fa-users text-secondary text-xl"></i>
+                              </div>
+                              <div>
+                                  <h3 class="text-xl font-bold mb-2 text-dark">Server-Based Communities</h3>
+                                  <p class="text-gray-600">Join public servers or create private communities with friends, featuring customizable roles, permissions, and moderation tools.</p>
+                              </div>
+                          </div>
+                          
+                          <div class="flex items-start">
+                              <div class="bg-accent/10 p-3 rounded-full mr-4 mt-1">
+                                  <i class="fa fa-gamepad text-accent text-xl"></i>
+                              </div>
+                              <div>
+                                  <h3 class="text-xl font-bold mb-2 text-dark">Gaming Integration</h3>
+                                  <p class="text-gray-600">Share your game activity, stream gameplay, and connect with other gamers through rich presence features and game integrations.</p>
+                              </div>
+                          </div>
+                          
+                          <div class="flex items-start">
+                              <div class="bg-green-500/10 p-3 rounded-full mr-4 mt-1">
+                                  <i class="fa fa-mobile text-green-500 text-xl"></i>
+                              </div>
+                              <div>
+                                  <h3 class="text-xl font-bold mb-2 text-dark">Cross-Platform Access</h3>
+                                  <p class="text-gray-600">Available on desktop, mobile, and web browsers, Discord ensures you stay connected with your communities wherever you are.</p>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="mt-8 p-4 bg-primary/5 rounded-xl border border-primary/20">
+                          <div class="flex items-start">
+                              <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                  <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+                              </div>
+                              <div>
+                                  <h4 class="font-semibold text-dark mb-2">Why Use Temp Mail for Discord?</h4>
+                                  <p class="text-gray-600 text-sm">Using temp mail for Discord registration helps protect your privacy when joining new servers, testing features, or creating alternate accounts without exposing your personal email address.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+              <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-dark mb-6">Why Use Temp Mail for Discord Registration?</h2>
+              <p class="text-lg text-gray-600">Protect your privacy and avoid spam while enjoying all Discord features</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="order-2 md:order-1">
+                  <div class="bg-light rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1">
+                      <h3 class="text-xl font-bold mb-4 text-dark">Protect Your Privacy</h3>
+                      <p class="text-gray-600 mb-4">Using temp mail for Discord prevents your real email from being exposed when joining new servers, reducing spam and protecting your digital identity.</p>
+                      
+                      <h3 class="text-xl font-bold mb-4 text-dark">Test Discord Features Safely</h3>
+                      <p class="text-gray-600 mb-4">Create alternate Discord accounts using temp mail for Discord to test bots, join experimental servers, or explore new features without affecting your main account.</p>
+                      
+                      <h3 class="text-xl font-bold mb-4 text-dark">Avoid Unwanted Notifications</h3>
+                      <p class="text-gray-600 mb-4">Temp mail for Discord helps you control which Discord notifications reach your primary inbox, keeping your main email clean and organized.</p>
+                      
+                      <div class="mt-8 p-4 bg-primary/5 rounded-xl border border-primary/20">
+                          <div class="flex items-start">
+                              <div class="bg-primary/10 p-3 rounded-full mr-4">
+                                  <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+                              </div>
+                              <div>
+                                  <h4 class="font-semibold text-dark mb-2">Expert Tip</h4>
+                                  <p class="text-gray-600 text-sm">Using temp mail for Discord is perfect for gamers and community managers who need multiple accounts for different servers or testing purposes.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="order-1 md:order-2 relative">
+                  <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                      <img src="https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=800&h=600&fit=crop" alt="Discord Community" class="w-full h-auto rounded-2xl">
+                      <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent flex items-end">
+                          <div class="p-6">
+                              <h3 class="text-white font-bold text-xl mb-2">Connect Safely, Protect Privacy</h3>
+                              <p class="text-white/90">Join Discord communities with confidence using temp mail for Discord protection</p>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!-- Decorative Elements -->
+                  <div class="absolute top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                  <div class="absolute -bottom-10 -left-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-light">
+      <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+              <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-dark mb-6">Benefits of Using Temp Mail for Discord</h2>
+              <p class="text-lg text-gray-600">Discover why temp mail for Discord is essential for secure community participation</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Feature Card 1 -->
+              <div class="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                  <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                      <i class="fa fa-user-secret text-primary text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-dark">Anonymous Discord Registration</h3>
+                  <p class="text-gray-600">Create Discord accounts without revealing your identity, perfect for joining sensitive communities or testing new servers.</p>
+              </div>
+              
+              <!-- Feature Card 2 -->
+              <div class="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                  <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+                      <i class="fa fa-bolt text-secondary text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-dark">Instant Discord Verification</h3>
+                  <p class="text-gray-600">Receive Discord verification emails instantly when using temp mail for Discord, ensuring quick account activation.</p>
+              </div>
+              
+              <!-- Feature Card 3 -->
+              <div class="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                  <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
+                      <i class="fa fa-spam text-accent text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-dark">Discord Spam Protection</h3>
+                  <p class="text-gray-600">Protect your main email from Discord server notifications and promotional emails by using temp mail for Discord.</p>
+              </div>
+              
+              <!-- Feature Card 4 -->
+              <div class="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                  <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6">
+                      <i class="fa fa-users text-green-500 text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-dark">Multiple Discord Accounts</h3>
+                  <p class="text-gray-600">Create multiple Discord accounts using temp mail for Discord to manage different communities or roles separately.</p>
+              </div>
+              
+              <!-- Feature Card 5 -->
+              <div class="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                  <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6">
+                      <i class="fa fa-mobile text-purple-500 text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-dark">Cross-Platform Access</h3>
+                  <p class="text-gray-600">Access your temp mail for Discord from any device, ensuring you can verify your account whether on mobile or desktop.</p>
+              </div>
+              
+              <!-- Feature Card 6 -->
+              <div class="bg-white rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-100">
+                  <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6">
+                      <i class="fa fa-shield text-blue-500 text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold mb-4 text-dark">Discord Privacy Protection</h3>
+                  <p class="text-gray-600">Keep your Discord activity separate from your personal email, ensuring complete privacy when participating in communities.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Steps Guide Section -->
+  <section id="steps" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+              <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-dark mb-6">How to Use Temp Mail for Discord Registration</h2>
+              <p class="text-lg text-gray-600">6 simple steps to create your Discord account using temp mail for Discord</p>
+          </div>
+          
+          <div class="relative">
+              <!-- Connection Line -->
+              <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 transform -translate-x-1/2 hidden md:block"></div>
+              
+              <!-- Step 1 -->
+              <div class="flex flex-col md:flex-row items-start mb-12">
+                  <div class="md:w-16 flex justify-center mb-6 md:mb-0">
+                      <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-lg z-10">1</div>
+                  </div>
+                  <div class="md:w-5/6 md:pl-12">
+                      <div class="bg-light rounded-2xl p-8 shadow-sm">
+                          <h3 class="text-xl font-bold mb-4 text-dark">Generate Your Temp Mail for Discord</h3>
+                          <p class="text-gray-600 mb-4">Use our temp mail service above to generate a temporary email address for Discord registration. This will protect your personal email from Discord notifications and spam.</p>
+                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                              <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center">
+                                  <div class="w-10 h-10 bg-primary/10 rounded-full mr-3 flex items-center justify-center">
+                                      <i class="fa fa-envelope text-primary"></i>
+                                  </div>
+                                  <div>
+                                      <span class="font-medium">Generate Email</span>
+                                      <p class="text-xs text-gray-500">Click "New Address" above</p>
+                                  </div>
+                              </div>
+                              <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center">
+                                  <div class="w-10 h-10 bg-green-500/10 rounded-full mr-3 flex items-center justify-center">
+                                      <i class="fa fa-copy text-green-500"></i>
+                                  </div>
+                                  <div>
+                                      <span class="font-medium">Copy Address</span>
+                                      <p class="text-xs text-gray-500">Save for Discord signup</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Step 2 -->
+              <div class="flex flex-col md:flex-row items-start mb-12">
+                  <div class="md:w-16 flex justify-center mb-6 md:mb-0">
+                      <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-lg z-10">2</div>
+                  </div>
+                  <div class="md:w-5/6 md:pl-12">
+                      <div class="bg-light rounded-2xl p-8 shadow-sm">
+                          <h3 class="text-xl font-bold mb-4 text-dark">Keep Your Temp Mail for Discord Ready</h3>
+                          <p class="text-gray-600 mb-4">Your temporary email address is now ready for Discord registration. Keep the temp mail inbox open in another tab to receive the verification email.</p>
+                          <div class="bg-white p-4 rounded-xl border border-gray-200 flex items-center justify-between mt-6">
+                              <div class="flex items-center">
+                                  <div class="bg-primary/10 p-2 rounded mr-3">
+                                      <i class="fa fa-envelope-o text-primary"></i>
+                                  </div>
+                                  <div>
+                                      <p class="font-medium">your-temp-email@domain.com</p>
+                                      <p class="text-xs text-gray-500">Ready for Discord verification</p>
+                                  </div>
+                              </div>
+                              <button class="px-4 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
+                                  <i class="fa fa-copy mr-1"></i> Copy
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Step 3 -->
+              <div class="flex flex-col md:flex-row items-start mb-12">
+                  <div class="md:w-16 flex justify-center mb-6 md:mb-0">
+                      <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-lg z-10">3</div>
+                  </div>
+                  <div class="md:w-5/6 md:pl-12">
+                      <div class="bg-light rounded-2xl p-8 shadow-sm">
+                          <h3 class="text-xl font-bold mb-4 text-dark">Open Discord and Start Registration</h3>
+                          <p class="text-gray-600 mb-4">Visit Discord.com or open the Discord app on your device. Click "Register" to start creating your new Discord account with temp mail.</p>
+                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                              <a href="https://discord.com" target="_blank" class="bg-white p-4 rounded-xl border border-gray-200 flex items-center hover:shadow-md transition-shadow">
+                                  <div class="w-10 h-10 bg-indigo-500/10 rounded-full mr-3 flex items-center justify-center">
+                                      <i class="fa fa-globe text-indigo-500"></i>
+                                  </div>
+                                  <div>
+                                      <p class="font-medium">Discord Web</p>
+                                      <p class="text-xs text-gray-500">Use in browser</p>
+                                  </div>
+                              </a>
+                              <a href="https://discord.com/download" target="_blank" class="bg-white p-4 rounded-xl border border-gray-200 flex items-center hover:shadow-md transition-shadow">
+                                  <div class="w-10 h-10 bg-purple-500/10 rounded-full mr-3 flex items-center justify-center">
+                                      <i class="fa fa-download text-purple-500"></i>
+                                  </div>
+                                  <div>
+                                      <p class="font-medium">Discord App</p>
+                                      <p class="text-xs text-gray-500">Download for desktop/mobile</p>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Step 4 -->
+              <div class="flex flex-col md:flex-row items-start mb-12">
+                  <div class="md:w-16 flex justify-center mb-6 md:mb-0">
+                      <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-lg z-10">4</div>
+                  </div>
+                  <div class="md:w-5/6 md:pl-12">
+                      <div class="bg-light rounded-2xl p-8 shadow-sm">
+                          <h3 class="text-xl font-bold mb-4 text-dark">Fill Discord Registration Form</h3>
+                          <p class="text-gray-600 mb-4">Enter your temp mail for Discord in the email field, along with a username and password. This creates your anonymous Discord account.</p>
+                          <div class="mt-6 bg-white p-6 rounded-xl border border-gray-200">
+                              <div class="mb-4">
+                                  <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                  <div class="relative">
+                                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                          <i class="fa fa-envelope-o text-gray-400"></i>
+                                      </div>
+                                      <input type="email" value="your-temp@mail.com" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" readonly>
+                                  </div>
+                              </div>
+                              <div class="mb-4">
+                                  <label class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                                  <div class="relative">
+                                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                          <i class="fa fa-user text-gray-400"></i>
+                                      </div>
+                                      <input type="text" placeholder="Choose your Discord username" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                                  </div>
+                              </div>
+                              <div class="mb-4">
+                                  <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                                  <div class="relative">
+                                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                          <i class="fa fa-lock text-gray-400"></i>
+                                      </div>
+                                      <input type="password" placeholder="Create a strong password" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+                                  </div>
+                              </div>
+                              <button class="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 transition-colors">
+                                  Create Discord Account
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Step 5 -->
+              <div class="flex flex-col md:flex-row items-start mb-12">
+                  <div class="md:w-16 flex justify-center mb-6 md:mb-0">
+                      <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-lg z-10">5</div>
+                  </div>
+                  <div class="md:w-5/6 md:pl-12">
+                      <div class="bg-light rounded-2xl p-8 shadow-sm">
+                          <h3 class="text-xl font-bold mb-4 text-dark">Verify with Temp Mail for Discord</h3>
+                          <p class="text-gray-600 mb-4">Check your temp mail inbox for the Discord verification email. Click the verification link to activate your new Discord account.</p>
+                          <div class="mt-6 bg-white p-6 rounded-xl border border-gray-200">
+                              <div class="flex items-start mb-4">
+                                  <div class="bg-indigo-500/10 p-3 rounded-full mr-4">
+                                      <i class="fa fa-envelope-o text-indigo-500"></i>
+                                  </div>
+                                  <div>
+                                      <h4 class="font-medium">Discord Verification Email</h4>
+                                      <p class="text-sm text-gray-600">From: Discord <noreply@discord.com></p>
+                                  </div>
+                              </div>
+                              <div class="border border-gray-200 rounded-lg p-4 mb-4">
+                                  <p class="font-medium mb-2">Subject: Verify your Discord email</p>
+                                  <p class="text-sm text-gray-600 mb-3">Hey there!</p>
+                                  <p class="text-sm text-gray-600 mb-3">Thanks for signing up for Discord! Please click the button below to verify your email address:</p>
+                                  <a href="#" class="text-indigo-600 text-sm">Verify Email Address</a>
+                              </div>
+                              <button class="w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 transition-colors">
+                                  <i class="fa fa-check mr-1"></i> Email Verified
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Step 6 -->
+              <div class="flex flex-col md:flex-row items-start">
+                  <div class="md:w-16 flex justify-center mb-6 md:mb-0">
+                      <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-lg z-10">6</div>
+                  </div>
+                  <div class="md:w-5/6 md:pl-12">
+                      <div class="bg-light rounded-2xl p-8 shadow-sm">
+                          <h3 class="text-xl font-bold mb-4 text-dark">Start Using Discord Safely</h3>
+                          <p class="text-gray-600 mb-4">Your Discord account created with temp mail is now ready! Join servers, chat with friends, and explore communities while keeping your privacy protected.</p>
+                          <div class="mt-6 bg-white p-6 rounded-xl border border-gray-200">
+                              <div class="flex flex-col items-center">
+                                  <div class="w-20 h-20 rounded-full bg-indigo-100 flex items-center justify-center mb-4">
+                                      <i class="fa fa-discord text-indigo-600 text-3xl"></i>
+                                  </div>
+                                  <h4 class="font-medium mb-2">Welcome to Discord!</h4>
+                                  <p class="text-sm text-gray-600 text-center mb-6">Your account created with temp mail for Discord is active and secure.</p>
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                                      <div class="bg-gray-50 p-4 rounded-lg">
+                                          <div class="flex items-center mb-2">
+                                              <i class="fa fa-shield text-green-500 mr-2"></i>
+                                              <span class="font-medium">Privacy Protected</span>
+                                          </div>
+                                          <p class="text-sm text-gray-600">Your real email stays hidden</p>
+                                      </div>
+                                      <div class="bg-gray-50 p-4 rounded-lg">
+                                          <div class="flex items-center mb-2">
+                                              <i class="fa fa-users text-blue-500 mr-2"></i>
+                                              <span class="font-medium">Join Communities</span>
+                                          </div>
+                                          <p class="text-sm text-gray-600">Start exploring Discord servers</p>
+                                      </div>
+                                  </div>
+                                  <button class="w-full mt-4 bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 transition-colors">
+                                      <i class="fa fa-rocket mr-1"></i> Start Using Discord
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-light">
+      <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+              <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-dark mb-6">Frequently Asked Questions</h2>
+              <p class="text-lg text-gray-600">Find answers to common questions about using temp mail for Discord</p>
+          </div>
+          
+          <div class="space-y-6 max-w-3xl mx-auto">
+              <!-- FAQ Item 1 -->
+              <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <button class="faq-toggle w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                      <span>Is it safe to use temp mail for Discord registration?</span>
+                      <i class="fa fa-plus text-primary transition-transform"></i>
+                  </button>
+                  <div class="faq-content px-6 pb-4 hidden">
+                      <p class="text-gray-600">Yes, using temp mail for Discord is safe and legal. Temp mail for Discord protects your primary email from spam and keeps your Discord activity private. However, remember that accounts created with temp mail for Discord may be harder to recover if you forget your password, so save your login credentials securely.</p>
+                  </div>
+              </div>
+              
+              <!-- FAQ Item 2 -->
+              <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <button class="faq-toggle w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                      <span>How long do temp emails last for Discord verification?</span>
+                      <i class="fa fa-plus text-primary transition-transform"></i>
+                  </button>
+                  <div class="faq-content px-6 pb-4 hidden">
+                      <p class="text-gray-600">Most temp mail services last between 10 minutes to 24 hours, which is sufficient for Discord verification. When using temp mail for Discord, the verification email typically arrives within seconds, so even short-duration temp emails work perfectly for Discord registration.</p>
+                  </div>
+              </div>
+              
+              <!-- FAQ Item 3 -->
+              <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <button class="faq-toggle w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                      <span>Can I use Discord without verifying my email?</span>
+                      <i class="fa fa-plus text-primary transition-transform"></i>
+                  </button>
+                  <div class="faq-content px-6 pb-4 hidden">
+                      <p class="text-gray-600">Discord requires email verification to unlock full functionality. Without verifying your Discord account, you'll have limited access to servers and features. Using temp mail for Discord ensures you can complete verification while maintaining privacy.</p>
+                  </div>
+              </div>
+              
+              <!-- FAQ Item 4 -->
+              <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <button class="faq-toggle w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                      <span>What happens if my temp mail for Discord expires?</span>
+                      <i class="fa fa-plus text-primary transition-transform"></i>
+                  </button>
+                  <div class="faq-content px-6 pb-4 hidden">
+                      <p class="text-gray-600">Once your Discord account is verified using temp mail for Discord, the account remains active even after the temp email expires. However, you won't receive future Discord notifications or password reset emails. Your Discord account will continue working normally for chatting and joining servers.</p>
+                  </div>
+              </div>
+              
+              <!-- FAQ Item 5 -->
+              <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <button class="faq-toggle w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                      <span>Can I change to a permanent email after using temp mail for Discord?</span>
+                      <i class="fa fa-plus text-primary transition-transform"></i>
+                  </button>
+                  <div class="faq-content px-6 pb-4 hidden">
+                      <p class="text-gray-600">Yes, Discord allows you to change your email address in account settings. After creating your account with temp mail for Discord, you can later switch to a permanent email if needed. This requires access to your current temp email during the transition process, so do this before the temp mail expires.</p>
+                  </div>
+              </div>
+              
+              <!-- FAQ Item 6 -->
+              <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <button class="faq-toggle w-full px-6 py-4 text-left font-medium flex justify-between items-center">
+                      <span>Why should I use temp mail for Discord instead of my regular email?</span>
+                      <i class="fa fa-plus text-primary transition-transform"></i>
+                  </button>
+                  <div class="faq-content px-6 pb-4 hidden">
+                      <p class="text-gray-600">Using temp mail for Discord offers several benefits: it keeps your personal email private, prevents Discord spam in your main inbox, allows you to create multiple Discord accounts for different purposes, and protects your identity when joining new or unfamiliar Discord servers.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+      <!-- Footer -->
+      <footer id="contact" class="mt-12 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <!-- Main Footer Content -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <!-- About Section -->
+            <div class="md:col-span-2">
+              <div class="flex items-center gap-2 mb-4">
+                <i class="fa-solid fa-envelope text-2xl text-blue-600"></i>
+                <span class="text-xl font-bold text-gray-900">TempMail</span>
+              </div>
+              <p class="text-gray-600 mb-4 max-w-md">
+                A free, secure, and private temporary email service. Protect your real email address from spam and unwanted messages with our disposable email solution.
+              </p>
+              <div class="flex items-center gap-2 text-sm text-gray-500">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Privacy-focused • No registration required • Open source</span>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+              <span class="font-semibold text-gray-900 mb-4">Quick Links</span>
+              <ul class="space-y-2 text-gray-600">
+                <li><a href="tempmail-chatgpt" target="_blank" class="hover:text-blue-600 transition-colors">TempMail For ChatGPT</a></li>
+                <li><a href="tempmail-deepseek" target="_blank" class="hover:text-blue-600 transition-colors">TempMail For DeepSeek</a></li>
+                <li><a href="privacy/privacy.html" target="_blank" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                <li><button onclick="showWarning()" class="hover:text-blue-600 transition-colors text-left">Terms of Use</button></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <span class="font-semibold text-gray-900 mb-4">Connect</span>
+              <div class="space-y-3">
+                <a href="mailto:mehmetkahyakas5@gmail.com" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Email Support</span>
+                </a>
+                <div class="flex items-center gap-2 text-gray-600">
+                  <i class="fa-solid fa-discord"></i>
+                  <span>Temp Mail for Discord</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Warning and Actions -->
+          <div class="border-t border-gray-200 pt-8 mb-8">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-triangle-exclamation text-yellow-600 mt-1"></i>
+                <div>
+                  <span class="font-semibold text-yellow-800 mb-1">Educational Purpose Notice</span>
+                  <p class="text-sm text-yellow-700">
+                    This project is for educational purposes only. Please use responsibly and legally. We are not responsible for any misuse of this service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row justify-center gap-3 mb-8">
+            <button 
+              class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-6 rounded-lg transition-colors" 
+              onclick="showWarning()"
+            >
+              <i class="fa-solid fa-triangle-exclamation"></i> View Full Warning
+            </button>
+            <a
+              href="privacy/privacy.html"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            >
+              <i class="fa-solid fa-shield"></i> Privacy Policy
+            </a>
+            <button 
+              class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            >
+              <i class="fa-solid fa-arrow-up"></i> Back to Top
+            </button>
+          </div>
+
+          <!-- Bottom Footer -->
+          <div class="text-center border-t border-gray-200 pt-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p class="text-gray-600">
+                <i class="fa-solid fa-code mr-2"></i>
+                © 2025 tempmailto.online - All rights reserved
+              </p>
+              <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-500">Made with</span>
+                <i class="fa-solid fa-heart text-red-500"></i>
+                <span class="text-sm text-gray-500">for privacy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function showWarning() {
+        alert(
+          "⚠️ This project is purely for educational purposes. We do not allow illegal things to be done with this project and we are not responsible for any incidents that may occur. This project uses mail.gw's API for creating temporary emails. Use it legally and responsibly ⚠️"
+        );
+      }
+    </script>
+
+    <script>
+      // Close notification functionality
+      document.getElementById('close-notification')?.addEventListener('click', () => {
+        document.getElementById('update-notification').classList.add('hidden');
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Only show welcome message if not seen before
+        
+      });
+      
+      // Poll functionality
+      let selectedRating = 0;
+
+      // Handle star click
+      document
+        .querySelectorAll(".star-rating .fa-star")
+        .forEach(function (star) {
+          star.addEventListener("click", function () {
+            selectedRating = parseInt(this.getAttribute("data-value"));
+            highlightStars(selectedRating);
+          });
+
+          star.addEventListener("mouseover", function () {
+            const hoverValue = parseInt(this.getAttribute("data-value"));
+            highlightStars(hoverValue);
+          });
+
+          star.addEventListener("mouseout", function () {
+            highlightStars(selectedRating);
+          });
+        });
+
+      function highlightStars(rating) {
+        document
+          .querySelectorAll(".star-rating .fa-star")
+          .forEach(function (star) {
+            if (parseInt(star.getAttribute("data-value")) <= rating) {
+              star.classList.add("checked");
+            } else {
+              star.classList.remove("checked");
+            }
+          });
+      }
+
+      function submitPoll() {
+        if (selectedRating > 0) {
+          console.log(
+            `User rated the new UI as: ${selectedRating} out of 5`
+          );
+          alert("Thank you for your feedback!");
+          document.querySelector(".poll").style.display = "none";
+        } else {
+          alert("Please select a rating before submitting.");
+        }
+      }
+
+      // FAQ functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        // Auto-refresh checkbox functionality
+        const autoRefreshCheckbox = document.getElementById('auto-refresh');
+        const autoRefreshLabel = autoRefreshCheckbox.parentElement;
+        const checkboxVisual = autoRefreshLabel.querySelector('div');
+        const checkIcon = autoRefreshLabel.querySelector('.fa-check');
+        
+        // Handle checkbox toggle
+        autoRefreshLabel.addEventListener('click', () => {
+          autoRefreshCheckbox.checked = !autoRefreshCheckbox.checked;
+          updateCheckboxVisual();
+        });
+        
+        // Update visual state
+        function updateCheckboxVisual() {
+          if (autoRefreshCheckbox.checked) {
+            checkboxVisual.classList.add('bg-blue-600', 'border-blue-600');
+            checkboxVisual.classList.remove('border-gray-300');
+            checkIcon.classList.remove('opacity-0');
+            checkIcon.classList.add('opacity-100');
+          } else {
+            checkboxVisual.classList.remove('bg-blue-600', 'border-blue-600');
+            checkboxVisual.classList.add('border-gray-300');
+            checkIcon.classList.add('opacity-0');
+            checkIcon.classList.remove('opacity-100');
+          }
+        }
+        
+        // Initialize checkbox state
+        updateCheckboxVisual();
+        
+        // FAQ toggle functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+          question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.fa-chevron-down');
+            
+            // Toggle answer visibility
+            if (answer.classList.contains('hidden')) {
+              answer.classList.remove('hidden');
+              icon.style.transform = 'rotate(180deg)';
+            } else {
+              answer.classList.add('hidden');
+              icon.style.transform = 'rotate(0deg)';
+            }
+          });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      });
+
+      function hideWelcomeMessage() {
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        welcomeMessage.style.animation = "slideOut 0.5s ease forwards";
+        
+        // Create confetti explosion
+        confetti({
+          particleCount: 150,
+          spread: 180,
+          origin: { y: 0.8 },
+          colors: ['#3B82F6', '#60A5FA', '#2563EB', '#10B981', '#34D399'],
+          startVelocity: 45,
+          gravity: 1.2,
+          scalar: 0.7,
+          ticks: 150
+        });
+
+        setTimeout(() => {
+          welcomeMessage.classList.add('hidden');
+          localStorage.setItem("welcomeMessageSeen", "true");
+        }, 500);
+      }
+
+       // FAQ accordion
+       document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle the content visibility
+                content.classList.toggle('hidden');
+                
+                // Rotate the chevron icon
+                if (content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+
+    <script src="js/config.js" type="module"></script>
+    <script src="js/api.js" type="module"></script>
+  </body>
+</html>
