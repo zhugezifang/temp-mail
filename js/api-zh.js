@@ -96,8 +96,7 @@ async function genEmail() {
         }
 
         const randomStr = Math.random().toString(36).substring(2, 8);
-        //const domain = CONFIG.DOMAINS[Math.floor(Math.random() * CONFIG.DOMAINS.length)];
-        const domain = "pokemail.net";
+        const domain = CONFIG.DOMAINS[Math.floor(Math.random() * CONFIG.DOMAINS.length)];
         const response = await fetch(`${CONFIG.API_BASE}?f=set_email_user`, {
             method: 'POST',
             headers: {

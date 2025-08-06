@@ -10,7 +10,12 @@ const CONFIG = {
     
     DOMAINS: [
         'pokemail.net',
-        'spam4.me'
+        'spam4.me',
+        'guerrillamail.com',
+        'guerrillamail.net',
+        'guerrillamail.org',
+        'guerrillamailblock.com',
+        'grr.la' 
     ],
     STATUS: {
         ONLINE: {
