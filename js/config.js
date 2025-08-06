@@ -9,13 +9,13 @@ const CONFIG = {
     REQUEST_TIMEOUT: 10000, // 10 seconds
     
     DOMAINS: [
+        'pokemail.net',
+        'spam4.me',
         'guerrillamail.com',
         'guerrillamail.net',
         'guerrillamail.org',
         'guerrillamailblock.com',
-        'grr.la',
-        'pokemail.net',
-        'spam4.me'
+        'grr.la' 
     ],
     STATUS: {
         ONLINE: {
