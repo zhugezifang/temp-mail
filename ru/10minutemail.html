@@ -2,7 +2,6 @@
     Author: Mehmet Kahya
     Created: 17 March 2024
     Last Updated: 31 January 2025
-    Russian Version
 -------------------------------->
 <!DOCTYPE html>
 <html lang="ru">
@@ -12,12 +11,12 @@
     <meta
       content="default-src 'self' https://api.guerrillamail.com https://cdnjs.cloudflare.com ws://127.0.0.1:* wss://127.0.0.1:*; connect-src 'self' https://api.guerrillamail.com ws://127.0.0.1:* wss://127.0.0.1:*; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; font-src https://cdnjs.cloudflare.com; img-src 'self' data: https:;"
     />
-    <title>Временная почта - Безопасный анонимный сервис временной электронной почты</title>
+    <title>10 Минутная Почта - Быстрый и Безопасный Временный Email Сервис</title>
     <meta
       name="description"
-      content="Используйте временную почту для безопасного и анонимного сервиса временной электронной почты. Защитите свою конфиденциальность, избегайте спама. Бесплатный, безопасный, конфиденциальный сервис одноразовой почты!"
+      content="Получите временный email адрес на 10 минут мгновенно! Бесплатный одноразовый email сервис для быстрой верификации, регистрации и защиты конфиденциальности. Регистрация не требуется."
     />
-
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKEFXS1BE5"></script>
     <script>
@@ -27,41 +26,31 @@
 
       gtag('config', 'G-NKEFXS1BE5');
     </script>
+
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4158779929727637"
     crossorigin="anonymous"></script>
 
+
     <!-- Additional SEO Meta Tags -->
-    <link rel="canonical" href="https://tempmailto.online/ru/" />
-    <link rel="alternate" hreflang="en" href="https://tempmailto.online/" />
-    <link rel="alternate" hreflang="zh" href="https://tempmailto.online/zh/" />
-    <link rel="alternate" hreflang="ru" href="https://tempmailto.online/ru/" />
-    <link rel="alternate" hreflang="x-default" href="https://tempmailto.online/" />
+    <link rel="canonical" href="https://tempmailto.online/ru/10minutemail" />
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Временная почта",
-      "alternateName": "TempMail",
-      "description": "Используйте временную почту для безопасного и анонимного сервиса временной электронной почты. Защитите свою конфиденциальность, избегайте спама. Бесплатный, безопасный, конфиденциальный сервис одноразовой почты!",
-      "url": "https://tempmailto.online/ru/",
-      "logo": "https://tempmailto.online/images/temp-mail-icon.png",
-      "applicationCategory": "EmailApplication",
-      "operatingSystem": "Web Browser",
-      "inLanguage": "ru",
-      "isAccessibleForFree": true,
-      "featureList": [
-        "Защита конфиденциальности",
-        "Мгновенная генерация",
-        "Обновление в реальном времени",
-        "Без регистрации",
-        "Бесплатное использование",
-        "Защита от спама"
-      ]
-    }
-    </script>
-    
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "10 Минутная Почта - Быстрый и Безопасный Временный Email Сервис",
+        "alternateName": "10MinuteMail",
+        "description": "Получите временный email адрес на 10 минут мгновенно! Бесплатный одноразовый email сервис для быстрой верификации, регистрации и защиты конфиденциальности. Регистрация не требуется.",
+        "url": "https://tempmailto.online/ru/10minutemail",
+        "logo": "https://tempmailto.online/images/temp-mail-icon.png",
+        "applicationCategory": "EmailApplication",
+        "operatingSystem": "Web Browser",
+        "inLanguage": "ru",
+        "isAccessibleForFree": true
+      }
+      </script>
+
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -70,10 +59,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="icon" href="../images/temp-mail-icon.png" type="image/x-icon" />
+    <link rel="icon" href="images/temp-mail-icon.png" type="image/x-icon" />
     
     <!-- Custom CSS for email modal and other components -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     
     <!-- Add confetti lib -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -161,7 +150,7 @@
         max-height: 90vh !important;
         overflow-y: auto !important;
         border-radius: 1rem !important;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
         animation: slideInModal 0.3s ease-out;
       }
       
@@ -373,18 +362,6 @@
           padding: 0.75rem 1rem !important;
           font-size: 0.875rem !important;
         }
-        
-        /* Chinese text mobile optimization */
-        p, span, div {
-          word-break: break-word !important;
-          line-height: 1.6 !important;
-        }
-        
-        /* Chinese navigation mobile */
-        nav .flex.flex-wrap {
-          justify-content: center !important;
-          text-align: center !important;
-        }
       }
       
       /* Extra small mobile devices */
@@ -423,23 +400,6 @@
           padding-left: 2.5rem !important;
           padding-right: 2.5rem !important;
         }
-        
-        /* Chinese text extra small mobile */
-        .text-lg {
-          font-size: 1rem !important;
-        }
-        
-        .text-xl {
-          font-size: 1.125rem !important;
-        }
-        
-        .text-2xl {
-          font-size: 1.25rem !important;
-        }
-        
-        .text-3xl {
-          font-size: 1.5rem !important;
-        }
       }
       
       /* Scrollbar styling for email content */
@@ -477,22 +437,20 @@
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
         }
       }
-      
-
     </style>
   </head>
 
   <body class="min-h-screen bg-gray-50 transition-colors duration-300">
     <div class="max-w-6xl mx-auto p-4">
-      <!-- 语言切换 -->
+      <!-- Переключение языков -->
       <div class="fixed top-4 left-4 z-50">
         <div class="bg-white p-2 rounded-lg shadow-lg">
           <div class="flex gap-2">
-            <a href="https://tempmailto.online/" class="px-3 py-1 text-sm text-gray-600 hover:text-blue-600 transition-colors">EN</a>
+            <a href="https://tempmailto.online/" class="px-3 py-1 text-sm text-blue-600">EN</a>
+            <span class="text-gray-300">|</span>
+            <a href="https://tempmailto.online/ru/" class="px-3 py-1 text-sm text-gray-600 hover:text-blue-600 font-medium">RU</a>
             <span class="text-gray-300">|</span>
             <a href="https://tempmailto.online/zh/" class="px-3 py-1 text-sm text-gray-600 hover:text-blue-600 font-medium">中文</a>
-            <span class="text-gray-300">|</span>
-            <a href="https://tempmailto.online/ru/" class="px-3 py-1 text-sm text-blue-600 font-medium transition-colors">RU</a>
           </div>
         </div>
       </div>
@@ -507,14 +465,15 @@
               <span class="text-2xl font-bold text-gray-900">Временная почта</span>
             </div>
             <div class="flex flex-wrap gap-4">
-              <a href="https://tempmailto.online/ru/10minutemail" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">10 минутная почта</a>
+              <a href="https://tempmailto.online/ru/10minutemail" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">10 Минутная Почта</a>
             </div>
           </div>
         </nav>
 
-        
+          
       </header>
 
+      
       <!-- Main Content -->
       <main class="relative mt-8">
         <!-- Core Function Highlight Background -->
@@ -532,10 +491,10 @@
               <i class="fa-solid fa-bolt text-white text-3xl"></i>
             </div>
             <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">
-              Временная почта
+              Сервис 10 Минутной Почты
             </h1>
             <p class="text-gray-600 max-w-2xl mx-auto">
-              Защитите свою реальную электронную почту от спама и нежелательных сообщений. Мгновенно создавайте временные адреса электронной почты, получайте письма в реальном времени.
+              Получите временный email адрес на 10 минут! Идеально для быстрой регистрации, загрузок и защиты вашего настоящего email от спама. Регистрация не требуется.
             </p>
           </div>
 
@@ -553,8 +512,8 @@
                       <i class="fa-solid fa-envelope text-white text-xl"></i>
                     </div>
                     <div>
-                      <span class="text-xl font-bold text-gray-900">Консоль почты</span>
-                      <p class="text-sm text-gray-600">Управление временными адресами электронной почты</p>
+                      <span class="text-xl font-bold text-gray-900">Панель 10 Минутной Почты</span>
+                      <p class="text-sm text-gray-600">Создайте ваш 10-минутный одноразовый email</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-2">
@@ -567,19 +526,19 @@
                   <div class="relative group">
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                       <i class="fa-solid fa-at mr-2 text-blue-600"></i>
-                      Текущий адрес электронной почты
+                      Ваш 10-минутный Email Адрес
                     </label>
                     <div class="relative">
                       <input 
                         id="addr" 
-                        placeholder="Нажмите кнопку для генерации нового адреса..." 
+                        placeholder="Нажмите 'Создать 10 Мин Email' чтобы получить временный адрес..." 
                         readonly 
-                        class="w-full pl-12 pr-14 py-4 border-2 border-gray-200 rounded-xl bg-gradient-to-r from-gray-50 to-blue-50 text-gray-900 focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 font-mono text-lg"
+                        class="w-full pl-12 pr-14 py-4 border-2 border-gray-200 rounded-xl bg-gradient-to-r from-gray-50 to-blue-50 text-gray-900 focus:ring-4 focus:ring-blue-500 transition-all duration-300 font-mono text-lg"
                       />
                       <i class="fa-solid fa-at absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-500"></i>
                       <button
                         onclick="copyEmail()"
-                        title="Скопировать адрес"
+                        title="Копировать email"
                         class="absolute right-3 top-1/2 transform -translate-y-1/2 p-2.5 text-gray-500 hover:text-blue-600 transition-all duration-300 hover:scale-110 bg-white rounded-lg shadow-sm hover:shadow-md"
                       >
                         <i class="fa-solid fa-copy"></i>
@@ -595,7 +554,7 @@
                     >
                       <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                       <i class="fa-solid fa-rotate group-hover:rotate-180 transition-transform duration-500"></i> 
-                      <span>Загрузка писем</span>
+                      <span>Проверить Почту</span>
                     </button>
                     <button 
                       onclick="genEmail()" 
@@ -603,7 +562,7 @@
                     >
                       <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                       <i class="fa-solid fa-wand-magic-sparkles group-hover:scale-110 transition-transform duration-300"></i> 
-                      <span>Создать новый адрес</span>
+                      <span>Создать 10 Мин Email</span>
                     </button>
                   </div>
                   
@@ -617,12 +576,12 @@
                           <i class="fa-solid fa-check absolute inset-0 w-6 h-6 text-blue-600 opacity-0 transition-opacity duration-200"></i>
                         </div>
                         <i class="fa-solid fa-arrows-rotate text-blue-600"></i>
-                        <span class="font-medium">Автоматическое обновление писем</span>
+                        <span class="font-medium">Автообновление почты</span>
                       </label>
                       <select id="refresh-interval" class="border-2 border-gray-200 rounded-lg px-4 py-2 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 min-w-0 w-full sm:w-auto">
-                        <option value="10">Каждые 10 секунд</option>
-                        <option value="30">Каждые 30 секунд</option>
-                        <option value="60">Каждые 1 минуту</option>
+                        <option value="10">Каждые 10с</option>
+                        <option value="30">Каждые 30с</option>
+                        <option value="60">Каждую 1м</option>
                       </select>
                     </div>
                   </div>
@@ -643,11 +602,12 @@
                       <i class="fa-solid fa-inbox text-white text-xl"></i>
                     </div>
                     <div>
-                      <span class="text-xl font-bold text-gray-900">Входящие</span>
-                      <p class="text-sm text-gray-600">Просмотр полученных писем</p>
+                      <span class="text-xl font-bold text-gray-900">10-минутная Почта</span>
+                      <p class="text-sm text-gray-600">Письма, полученные в вашем временном почтовом ящике</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-2">
+                    
                   </div>
                 </div>
 
@@ -655,14 +615,14 @@
                 <div class="mb-6">
                   <label class="block text-sm font-medium text-gray-700 mb-2">
                     <i class="fa-solid fa-magnifying-glass mr-2 text-purple-600"></i>
-                    Поиск писем
+                    Поиск Писем
                   </label>
                   <div class="relative">
                     <input
                       type="text"
                       id="email-search"
-                      placeholder="Введите ключевое слово для поиска..."
-                      class="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl bg-gradient-to-r from-gray-50 to-purple-50 text-gray-900 focus:ring-4 focus:ring-purple-500/20 focus:border-purple-500 transition-all duration-300"
+                      placeholder="Введите ключевые слова для поиска в содержимом писем..."
+                      class="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl bg-gradient-to-r from-gray-50 to-purple-50 text-gray-900 focus:ring-4 focus:ring-purple-500 transition-all duration-300"
                     />
                     <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-purple-500"></i>
                   </div>
@@ -680,10 +640,10 @@
                     <thead>
                       <tr class="border-b border-gray-200 bg-gradient-to-r from-gray-100 to-purple-100">
                         <th class="text-left py-4 px-6 font-semibold text-gray-900">
-                          <i class="fa-solid fa-hashtag mr-2 text-purple-600"></i> №
+                          <i class="fa-solid fa-hashtag mr-2 text-purple-600"></i> ID
                         </th>
                         <th class="text-left py-4 px-6 font-semibold text-gray-900">
-                          <i class="fa-solid fa-user mr-2 text-blue-600"></i> Отправитель
+                          <i class="fa-solid fa-user mr-2 text-blue-600"></i> От
                         </th>
                         <th class="text-left py-4 px-6 font-semibold text-gray-900">
                           <i class="fa-solid fa-envelope mr-2 text-green-600"></i> Тема
@@ -692,7 +652,7 @@
                           <i class="fa-solid fa-calendar mr-2 text-orange-600"></i> Дата
                         </th>
                         <th class="text-left py-4 px-6 font-semibold text-gray-900">
-                          <i class="fa-solid fa-gear mr-2 text-gray-600"></i> Действие
+                          <i class="fa-solid fa-gear mr-2 text-gray-600"></i> Действия
                         </th>
                       </tr>
                     </thead>
@@ -721,10 +681,10 @@
               <i class="fa-solid fa-crown text-white text-2xl"></i>
             </div>
             <h2 class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent mb-4">
-              Почему выбирают временную почту?
+              Почему Выбирают 10 Минутную Почту
             </h2>
             <p class="text-lg text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed">
-              Мы предлагаем безопасный, анонимный, бесплатный сервис временной электронной почты. Откажитесь от спама, защитите свою конфиденциальность.
+              Наш сервис 10-минутной почты предоставляет мгновенные одноразовые email адреса, которые автоматически истекают через 10 минут, сохраняя вашу почту чистой, а конфиденциальность защищенной.
             </p>
             <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto"></div>
           </div>
@@ -736,8 +696,8 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i class="fa-solid fa-user-secret text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
               </div>
-              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">Полное анонимное</span>
-              <p class="text-gray-600 leading-relaxed">Не регистрируйтесь, не предоставляйте личные данные, используйте временную почту полностью анонимно</p>
+              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">10-минутная Длительность</span>
+              <p class="text-gray-600 leading-relaxed">Каждый email адрес активен ровно 10 минут, обеспечивая идеальное время для быстрых верификаций и загрузок</p>
             </div>
             
             <div class="group text-center transform hover:scale-105 transition-all duration-300">
@@ -745,8 +705,8 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i class="fa-solid fa-rocket text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
               </div>
-              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">Быстрая генерация</span>
-              <p class="text-gray-600 leading-relaxed">Нажмите кнопку, чтобы создать новый временный адрес электронной почты, который будет доступен в любое время</p>
+              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">Мгновенное Создание</span>
+              <p class="text-gray-600 leading-relaxed">Создавайте новые 10-минутные email адреса мгновенно одним кликом - без ожидания, без задержек, только немедленный доступ</p>
             </div>
             
             <div class="group text-center transform hover:scale-105 transition-all duration-300">
@@ -754,8 +714,8 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-violet-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i class="fa-solid fa-shield-check text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
               </div>
-              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">Безопасно</span>
-              <p class="text-gray-600 leading-relaxed">Письма автоматически удаляются, не оставляя следов, обеспечивая вашу конфиденциальность и безопасность данных</p>
+              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">Автоочистка</span>
+              <p class="text-gray-600 leading-relaxed">Все письма автоматически исчезают через 10 минут, обеспечивая нулевые следы и максимальную защиту конфиденциальности</p>
             </div>
             
             <div class="group text-center transform hover:scale-105 transition-all duration-300">
@@ -763,16 +723,16 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <i class="fa-solid fa-globe text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
               </div>
-              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">Глобально доступно</span>
-              <p class="text-gray-600 leading-relaxed">Поддерживает прием писем по всему миру, совместим с различными почтовыми провайдерами</p>
+              <span class="font-bold text-xl text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-300">Универсальная Совместимость</span>
+              <p class="text-gray-600 leading-relaxed">Работает со всеми сайтами и сервисами, требующими верификацию email - идеально для быстрой регистрации</p>
             </div>
           </div>
           
           <!-- Use Cases -->
           <div class="mb-16">
             <div class="text-center mb-10">
-              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Частые сценарии использования временной почты</h2>
-              <p class="text-gray-600 max-w-2xl mx-auto">Узнайте, как временная почта полезна в повседневной жизни</p>
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Идеальные Случаи Использования 10 Минутной Почты</h2>
+              <p class="text-gray-600 max-w-2xl mx-auto">Узнайте, когда 10-минутная временная почта является идеальным решением для ваших потребностей</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300">
@@ -780,9 +740,9 @@
                   <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i class="fa-solid fa-user-plus text-white"></i>
                   </div>
-                  <span class="font-bold text-lg text-gray-900">Регистрация на сайте</span>
+                  <span class="font-bold text-lg text-gray-900">Быстрая Регистрация</span>
                 </div>
-                <p class="text-gray-600 leading-relaxed">Используйте временную почту при регистрации на различные сайты, приложения, форумы, чтобы избежать использования вашей реальной электронной почты для спама или нежелательных сообщений</p>
+                <p class="text-gray-600 leading-relaxed">Регистрируйтесь на сайтах и сервисах, которым нужен только временный доступ - идеально для пробных версий и одноразового использования</p>
               </div>
               
               <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300">
@@ -790,9 +750,9 @@
                   <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i class="fa-solid fa-download text-white"></i>
                   </div>
-                  <span class="font-bold text-lg text-gray-900">Загрузка файлов</span>
+                  <span class="font-bold text-lg text-gray-900">Мгновенные Загрузки</span>
                 </div>
-                <p class="text-gray-600 leading-relaxed">При загрузке файлов, требующих подтверждения по электронной почте, защитите вашу реальную электронную почту</p>
+                <p class="text-gray-600 leading-relaxed">Загружайте файлы, программное обеспечение и ресурсы, требующие верификации email, не засоряя ваш настоящий почтовый ящик</p>
               </div>
               
               <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300">
@@ -800,9 +760,9 @@
                   <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i class="fa-solid fa-gift text-white"></i>
                   </div>
-                  <span class="font-bold text-lg text-gray-900">Участие в мероприятиях</span>
+                  <span class="font-bold text-lg text-gray-900">Верификация Событий</span>
                 </div>
-                <p class="text-gray-600 leading-relaxed">При участии в онлайн-мероприятиях, конкурсах, розыгрышах, требующих электронной почты, избегайте последующих маркетинговых писем</p>
+                <p class="text-gray-600 leading-relaxed">Присоединяйтесь к вебинарам, конкурсам и онлайн-событиям, требующим подтверждения email для 10 минут доступа</p>
               </div>
               
               <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300">
@@ -810,9 +770,9 @@
                   <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i class="fa-solid fa-eye text-white"></i>
                   </div>
-                  <span class="font-bold text-lg text-gray-900">Пробное использование</span>
+                  <span class="font-bold text-lg text-gray-900">Тестирование Сервисов</span>
                 </div>
-                <p class="text-gray-600 leading-relaxed">При пробном использовании различных онлайн-сервисов, бесплатных пробных периодов продуктов, защитите вашу личную информацию</p>
+                <p class="text-gray-600 leading-relaxed">Пробуйте новые онлайн-сервисы и платформы без использования вашего постоянного email адреса</p>
               </div>
               
               <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300">
@@ -820,9 +780,9 @@
                   <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i class="fa-solid fa-comments text-white"></i>
                   </div>
-                  <span class="font-bold text-lg text-gray-900">Отзывы и обратная связь</span>
+                  <span class="font-bold text-lg text-gray-900">Анонимные Отзывы</span>
                 </div>
-                <p class="text-gray-600 leading-relaxed">При оставлении отзывов, отправке обратной связи, связи с поддержкой, защитите ваши реальные контакты</p>
+                <p class="text-gray-600 leading-relaxed">Отправляйте отзывы, рецензии или комментарии, сохраняя полную анонимность в течение 10 минут</p>
               </div>
               
               <div class="group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl border border-gray-100 transform hover:-translate-y-2 transition-all duration-300">
@@ -830,9 +790,9 @@
                   <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                     <i class="fa-solid fa-shield-virus text-white"></i>
                   </div>
-                  <span class="font-bold text-lg text-gray-900">Безопасные тесты</span>
+                  <span class="font-bold text-lg text-gray-900">Тестирование Безопасности</span>
                 </div>
-                <p class="text-gray-600 leading-relaxed">При тестировании ненадежных сайтов, проверке безопасности электронной почты, избегайте угроз вашей реальной электронной почты</p>
+                <p class="text-gray-600 leading-relaxed">Тестируйте подозрительные сайты и проверяйте безопасность email без риска для вашего настоящего email адреса</p>
               </div>
             </div>
           </div>
@@ -849,8 +809,8 @@
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur rounded-full mb-4">
                   <i class="fa-solid fa-trophy text-white text-2xl"></i>
                 </div>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Преимущества временной почты</h2>
-                <p class="text-blue-100 max-w-2xl mx-auto">Опыт нашего сервиса приносит множество удобств и гарантий</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Преимущества 10 Минутной Почты</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto">Испытайте удобство и безопасность временных одноразовых email адресов</p>
               </div>
               
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -859,8 +819,8 @@
                     <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
                   </div>
                   <div>
-                    <span class="font-bold text-xl mb-2">Защита конфиденциальности</span>
-                    <p class="text-blue-100 leading-relaxed">Избегайте сбора, продажи или использования вашего реального адреса электронной почты для спама или маркетинга</p>
+                    <span class="font-bold text-xl mb-2">Временная Конфиденциальность</span>
+                    <p class="text-blue-100 leading-relaxed">Ваш email адрес автоматически истекает через 10 минут, обеспечивая отсутствие долгосрочного раскрытия данных</p>
                   </div>
                 </div>
                 
@@ -869,8 +829,8 @@
                     <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
                   </div>
                   <div>
-                    <span class="font-bold text-xl mb-2">Уменьшение спама</span>
-                    <p class="text-blue-100 leading-relaxed">Эффективно предотвращает спам, рекламные письма в вашу основную электронную почту</p>
+                    <span class="font-bold text-xl mb-2">Нулевой Риск Спама</span>
+                    <p class="text-blue-100 leading-relaxed">Поскольку адрес истекает через 10 минут, нет шансов получить спам или нежелательные письма позже</p>
                   </div>
                 </div>
                 
@@ -879,8 +839,8 @@
                     <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
                   </div>
                   <div>
-                    <span class="font-bold text-xl mb-2">Экономия времени</span>
-                    <p class="text-blue-100 leading-relaxed">Не нужно управлять и очищать спам, экономия времени на управление электронной почтой</p>
+                    <span class="font-bold text-xl mb-2">Идеальное Время</span>
+                    <p class="text-blue-100 leading-relaxed">10 минут идеально для большинства процессов верификации, давая достаточно времени без долгосрочных обязательств</p>
                   </div>
                 </div>
                 
@@ -889,8 +849,8 @@
                     <i class="fa-solid fa-check-circle text-green-300 text-xl"></i>
                   </div>
                   <div>
-                    <span class="font-bold text-xl mb-2">Повышение безопасности</span>
-                    <p class="text-blue-100 leading-relaxed">Снижение риска взлома или утечки данных вашей реальной электронной почты</p>
+                    <span class="font-bold text-xl mb-2">Повышенная Безопасность</span>
+                    <p class="text-blue-100 leading-relaxed">Краткосрочные email адреса минимизируют ваш цифровой след и снижают уязвимости безопасности</p>
                   </div>
                 </div>
               </div>
@@ -899,300 +859,210 @@
         </div>
       </div>
 
-      <!-- SEO Optimized Content Section -->
-      <section class="py-12">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-          <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">
-              Полное руководство по временной почте
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="space-y-6">
-                <div class="bg-blue-50 rounded-lg p-6">
-                  <h3 class="text-xl font-bold text-blue-900 mb-3">
-                    <i class="fa-solid fa-shield-halved mr-2"></i>
-                    Безопасность временной почты
-                  </h3>
-                  <p class="text-gray-700 leading-relaxed">
-                    Временная почта обеспечивает максимальную защиту вашей конфиденциальности. Все письма автоматически удаляются через определенное время, не оставляя следов в системе. Это делает временную почту идеальным решением для защиты от спама и нежелательных сообщений.
-                  </p>
-                </div>
-                
-                <div class="bg-green-50 rounded-lg p-6">
-                  <h3 class="text-xl font-bold text-green-900 mb-3">
-                    <i class="fa-solid fa-rocket mr-2"></i>
-                    Быстрая настройка временной почты
-                  </h3>
-                  <p class="text-gray-700 leading-relaxed">
-                    Наша временная почта работает мгновенно - просто нажмите кнопку и получите новый адрес. Никаких регистраций, никаких ожиданий. Временная почта готова к использованию сразу после создания.
-                  </p>
-                </div>
-              </div>
-              
-              <div class="space-y-6">
-                <div class="bg-purple-50 rounded-lg p-6">
-                  <h3 class="text-xl font-bold text-purple-900 mb-3">
-                    <i class="fa-solid fa-globe mr-2"></i>
-                    Глобальная доступность временной почты
-                  </h3>
-                  <p class="text-gray-700 leading-relaxed">
-                    Временная почта работает по всему миру и совместима со всеми основными почтовыми провайдерами. Независимо от того, где вы находитесь, наша временная почта обеспечит надежную доставку писем.
-                  </p>
-                </div>
-                
-                <div class="bg-orange-50 rounded-lg p-6">
-                  <h3 class="text-xl font-bold text-orange-900 mb-3">
-                    <i class="fa-solid fa-clock mr-2"></i>
-                    Временная почта для срочных задач
-                  </h3>
-                  <p class="text-gray-700 leading-relaxed">
-                    Когда вам нужна быстрая проверка или временная регистрация, наша временная почта предоставляет мгновенное решение. Идеально подходит для тестирования сервисов, получения одноразовых кодов и временных аккаунтов.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
-              <h3 class="text-xl font-bold mb-4 text-center">
-                <i class="fa-solid fa-lightbulb mr-2"></i>
-                Советы по использованию временной почты
-              </h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <ul class="space-y-2">
-                  <li class="flex items-start">
-                    <i class="fa-solid fa-check-circle text-green-300 mt-1 mr-2"></i>
-                    <span>Используйте временную почту для регистрации на новых сайтах</span>
-                  </li>
-                  <li class="flex items-start">
-                    <i class="fa-solid fa-check-circle text-green-300 mt-1 mr-2"></i>
-                    <span>Временная почта идеальна для получения одноразовых кодов</span>
-                  </li>
-                  <li class="flex items-start">
-                    <i class="fa-solid fa-check-circle text-green-300 mt-1 mr-2"></i>
-                    <span>Создавайте новую временную почту для каждого важного сервиса</span>
-                  </li>
-                </ul>
-                <ul class="space-y-2">
-                  <li class="flex items-start">
-                    <i class="fa-solid fa-check-circle text-green-300 mt-1 mr-2"></i>
-                    <span>Временная почта защищает от спама и маркетинговых писем</span>
-                  </li>
-                  <li class="flex items-start">
-                    <i class="fa-solid fa-check-circle text-green-300 mt-1 mr-2"></i>
-                    <span>Используйте временную почту для тестирования новых сервисов</span>
-                  </li>
-                  <li class="flex items-start">
-                    <i class="fa-solid fa-check-circle text-green-300 mt-1 mr-2"></i>
-                    <span>Временная почта не требует личной информации</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- FAQ Section -->
       <section id="faq" class="py-12">
         <div class="bg-white rounded-lg shadow-lg p-8">
           <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">
-            Частые вопросы о временной почте
+            Часто Задаваемые Вопросы о 10 Минутной Почте
           </h2>
           
           <div class="max-w-4xl mx-auto space-y-6">
             <!-- FAQ Item 1 -->
             <div class="border border-gray-200 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors rounded-lg">
-                <h3 class="font-semibold text-gray-900">Что такое временный адрес электронной почты?</h3>
+                <h3 class="font-semibold text-gray-900">Что такое 10 минутная почта?</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600">
-                Временный адрес электронной почты - это одноразовый адрес, который вы можете использовать для получения писем, не раскрывая ваш реальный адрес электронной почты. Он идеально подходит для регистрации услуг, загрузки файлов или любого случая, когда вам нужна электронная почта, но вы не хотите использовать личную электронную почту.
+                10 минутная почта - это временный email сервис, который предоставляет вам одноразовый email адрес, автоматически истекающий через 10 минут. Идеально для быстрых верификаций, регистраций и защиты вашего настоящего email от спама.
               </div>
             </div>
 
             <!-- FAQ Item 2 -->
             <div class="border border-gray-200 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors rounded-lg">
-                <h3 class="font-semibold text-gray-900">Как долго сохраняется временный адрес электронной почты?</h3>
+                <h3 class="font-semibold text-gray-900">Почему именно 10 минут?</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600">
-                Временные адреса электронной почты обычно сохраняются несколько часов до нескольких дней, в зависимости от поставщика услуг. Письма, которые вы получаете, будут автоматически удалены в течение этого периода. Это обеспечивает вашу конфиденциальность и поддерживает чистоту сервиса.
+                10 минут - это оптимальная длительность для большинства онлайн-активностей, таких как верификация email, подтверждение аккаунта и загрузка файлов. Этого достаточно для выполнения этих задач, но достаточно коротко для обеспечения вашей конфиденциальности и предотвращения накопления спама.
               </div>
             </div>
 
             <!-- FAQ Item 3 -->
             <div class="border border-gray-200 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors rounded-lg">
-                <h3 class="font-semibold text-gray-900">Безопасно ли использовать временную почту?</h3>
+                <h3 class="font-semibold text-gray-900">Безопасно ли использовать 10 минутную почту?</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600">
-                Да, для некритических коммуникаций использование временной электронной почты обычно безопасно. Однако, пожалуйста, избегайте его использования для важных учетных записей, таких как банковские, социальные сети или рабочие учетные записи, так как вам может понадобиться восстановить эти учетные записи позже.
+                Да, 10 минутная почта безопасна для временного использования и нечувствительных коммуникаций. 10-минутное истечение добавляет дополнительный уровень безопасности. Однако избегайте использования для важных аккаунтов, к которым вам понадобится долгосрочный доступ.
               </div>
             </div>
 
             <!-- FAQ Item 4 -->
             <div class="border border-gray-200 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors rounded-lg">
-                <h3 class="font-semibold text-gray-900">Можно ли отправлять письма с временного адреса электронной почты?</h3>
+                <h3 class="font-semibold text-gray-900">Могу ли я продлить 10-минутную длительность?</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600">
-                Большинство временных почтовых сервисов (включая этот) используются только для получения писем. Вы не можете отправлять письма с временного адреса электронной почты. Если вам нужно отправить письмо, рассмотрите использование вашего обычного почтового провайдера или специальных почтовых сервисов.
+                Нет, 10-минутная длительность фиксирована и не может быть продлена. Это сделано намеренно для обеспечения максимальной конфиденциальности и безопасности. Если вам нужно больше времени, вы можете создать новый 10-минутный email адрес.
               </div>
             </div>
 
             <!-- FAQ Item 5 -->
             <div class="border border-gray-200 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors rounded-lg">
-                <h3 class="font-semibold text-gray-900">Сохраняете ли вы или регистрируете содержимое писем?</h3>
+                <h3 class="font-semibold text-gray-900">Что происходит через 10 минут?</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600">
-                Этот сервис разработан с концепцией конфиденциальности. Мы не сохраняем постоянно содержимое писем или личные данные. Все письма автоматически удаляются через определенное время, за исключением базовых функций сервиса, мы не отслеживаем или не регистрируем действия пользователей.
+                Через 10 минут ваш временный email адрес полностью истекает. Все письма в этом почтовом ящике навсегда удаляются, и адрес становится недоступным. Эта автоматическая очистка обеспечивает вашу конфиденциальность и предотвращает накопление спама.
               </div>
             </div>
 
             <!-- FAQ Item 6 -->
             <div class="border border-gray-200 rounded-lg">
               <button class="faq-question w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors rounded-lg">
-                <h3 class="font-semibold text-gray-900">Почему я вижу сообщение "Загрузка не удалась"?</h3>
+                <h3 class="font-semibold text-gray-900">Почему я вижу сообщения "не удалось загрузить"?</h3>
                 <i class="fa-solid fa-chevron-down text-gray-500 transition-transform duration-200"></i>
               </button>
               <div class="faq-answer hidden px-6 py-4 text-gray-600">
-                Сообщение "Загрузка не удалась" может быть вызвано ограничениями API или временными проблемами сервера. Пожалуйста, попробуйте несколько раз нажать кнопку "Создать новый адрес" или подождите несколько минут, прежде чем попробовать снова. Если проблема все еще существует, свяжитесь с нами через наши социальные сети.
+                Сообщения "не удалось загрузить" могут возникать из-за ограничений API или временных проблем с сервером. Попробуйте нажать кнопку "Создать 10 Мин Email" несколько раз или подождите несколько мгновений перед повторной попыткой. Если проблема сохраняется, пожалуйста, свяжитесь с нами через наши ссылки в социальных сетях.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-     <!-- Footer -->
-     <footer id="contact" class="mt-12 py-12">
-      <div class="bg-white rounded-lg shadow-lg p-8">
-        <!-- Main Footer Content -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <!-- About Section -->
-          <div class="md:col-span-2">
-            <div class="flex items-center gap-2 mb-4">
-              <i class="fa-solid fa-envelope text-2xl text-blue-600"></i>
-              <span class="text-xl font-bold text-gray-900">TempMail</span>
+      <!-- Footer -->
+      <footer id="contact" class="mt-12 py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <!-- Main Footer Content -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <!-- About Section -->
+            <div class="md:col-span-2">
+              <div class="flex items-center gap-2 mb-4">
+                <i class="fa-solid fa-envelope text-2xl text-blue-600"></i>
+                <span class="text-xl font-bold text-gray-900">10MinuteMail</span>
+              </div>
+              <p class="text-gray-600 mb-4 max-w-md">
+                Самый быстрый сервис 10-минутной временной почты. Получите одноразовые email адреса, которые автоматически истекают через 10 минут, идеально для быстрых верификаций и защиты конфиденциальности.
+              </p>
+              <div class="flex items-center gap-2 text-sm text-gray-500">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Ориентирован на конфиденциальность • Регистрация не требуется • Открытый исходный код</span>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+              <span class="font-semibold text-gray-900 mb-4">Быстрые Ссылки</span>
+              <ul class="space-y-2 text-gray-600">
+                <li><a href="#features" class="hover:text-blue-600 transition-colors">Возможности</a></li>
+                <li><a href="#faq" class="hover:text-blue-600 transition-colors">FAQ</a></li>
+                <li><a href="privacy/privacy.html" target="_blank" class="hover:text-blue-600 transition-colors">Политика Конфиденциальности</a></li>
+                <li><button onclick="showWarning()" class="hover:text-blue-600 transition-colors text-left">Условия Использования</button></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <span class="font-semibold text-gray-900 mb-4">Связаться</span>
+              <div class="space-y-3">
+                <a href="mailto:mehmetkahyakas5@gmail.com" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Email Поддержка</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Quick Links -->
-          <div>
-            <span class="font-semibold text-gray-900 mb-4">Quick Links</span>
-            <ul class="space-y-2 text-gray-600">
-              
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div>
-            <span class="font-semibold text-gray-900 mb-4">Connect</span>
-            <div class="space-y-3">
-              <a href="mailto:mehmetkahyakas5@gmail.com" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email Support</span>
-              </a>
+          <!-- Warning and Actions -->
+          <div class="border-t border-gray-200 pt-8 mb-8">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-triangle-exclamation text-yellow-600 mt-1"></i>
+                <div>
+                  <span class="font-semibold text-yellow-800 mb-1">Уведомление об Образовательных Целях</span>
+                  <p class="text-sm text-yellow-700">
+                    Этот проект предназначен только для образовательных целей. Пожалуйста, используйте ответственно и законно. Мы не несем ответственности за любое неправильное использование этого сервиса.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Warning and Actions -->
-        <div class="border-t border-gray-200 pt-8 mb-8">
-          <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-triangle-exclamation text-yellow-600 mt-1"></i>
-              <div>
-                <span class="font-semibold text-yellow-800 mb-1">Educational Purpose Notice</span>
-                <p class="text-sm text-yellow-700">
-                  This project is for educational purposes only. Please use responsibly and legally. We are not responsible for any misuse of this service.
-                </p>
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row justify-center gap-3 mb-8">
+            <button 
+              class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-6 rounded-lg transition-colors" 
+              onclick="showWarning()"
+            >
+              <i class="fa-solid fa-triangle-exclamation"></i> Посмотреть Полное Предупреждение
+            </button>
+            <a
+              href="privacy/privacy.html"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            >
+              <i class="fa-solid fa-shield"></i> Политика Конфиденциальности
+            </a>
+            <button 
+              class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            >
+              <i class="fa-solid fa-arrow-up"></i> Наверх
+            </button>
+          </div>
+
+          <!-- Bottom Footer -->
+          <div class="text-center border-t border-gray-200 pt-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+              <p class="text-gray-600">
+                <i class="fa-solid fa-code mr-2"></i>
+                © 2025 10minutemail.online - Все права защищены
+              </p>
+              <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-500">Сделано с</span>
+                <i class="fa-solid fa-heart text-red-500"></i>
+                <span class="text-sm text-gray-500">для 10-минутной конфиденциальности</span>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row justify-center gap-3 mb-8">
-          <button 
-            class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-6 rounded-lg transition-colors" 
-            onclick="showWarning()"
-          >
-            <i class="fa-solid fa-triangle-exclamation"></i> View Full Warning
-          </button>
-          <a
-            href="privacy/privacy.html"
-            target="_blank"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-          >
-            <i class="fa-solid fa-shield"></i> Privacy Policy
-          </a>
-          <button 
-            class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
-            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-          >
-            <i class="fa-solid fa-arrow-up"></i> Back to Top
-          </button>
-        </div>
-
-        <div class="flex space-x-4 flex-wrap justify-center items-center t-12 mt-6 my-6">
-          <span><a href="https://tempmailto.online/" target="_blank">English</a></span>
-          <span><a href="https://tempmailto.online/zh" target="_blank">简体中文</a></span>
-          <span><a href="https://tempmailto.online/ru" target="_blank">RU</a></span>
-        </div>
-        <!-- Bottom Footer -->
-        <div class="text-center border-t border-gray-200 pt-8">
-          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p class="text-gray-600">
-              <i class="fa-solid fa-code mr-2"></i>
-              © 2025 tempmailto.online - All rights reserved
-            </p>
-            <div class="flex items-center gap-4">
-              <span class="text-sm text-gray-500">Made with</span>
-              <i class="fa-solid fa-heart text-red-500"></i>
-              <span class="text-sm text-gray-500">for privacy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+      </footer>
     </div>
 
     <!-- Welcome Message Modal -->
     <div id="welcomeMessage" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
       <div class="bg-white rounded-lg shadow-xl max-w-md mx-4 p-6">
         <div class="text-center">
-          <div class="flex items-center justify-center gap-2 mb-4">
-            <i class="fas fa-info-circle text-blue-600 text-2xl"></i>
-            <h3 class="text-xl font-bold text-gray-900">Добро пожаловать в временную почту</h3>
-          </div>
-          
-          <div class="text-gray-600 text-left space-y-3">
-            <p><strong>Если вы видите сообщение "Загрузка не удалась":</strong></p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Пожалуйста, попробуйте несколько раз нажать кнопку "Создать новый адрес"</li>
-              <li>
-                Если проблема все еще существует, свяжитесь со мной через GitHub или LinkedIn
-              </li>
-            </ul>
-            <p class="text-center">Спасибо за использование моего проекта! ❤️</p>
-          </div>
-          
-          <div class="mt-6">
-            <button 
-              onclick="hideWelcomeMessage()" 
-              class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
-            >
-              Понял!
-            </button>
-          </div>
+                      <div class="flex items-center justify-center gap-2 mb-4">
+              <i class="fas fa-info-circle text-blue-600 text-2xl"></i>
+              <h3 class="text-xl font-bold text-gray-900">Добро пожаловать в 10 Минутную Почту</h3>
+            </div>
+            
+            <div class="text-gray-600 text-left space-y-3">
+              <p><strong>Если вы видите сообщение "не удалось загрузить":</strong></p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Попробуйте нажать кнопку "Создать 10 Мин Email" несколько раз</li>
+                <li>
+                  Если проблема сохраняется, пожалуйста, свяжитесь со мной на GitHub или LinkedIn
+                </li>
+              </ul>
+              <p class="text-center">Спасибо за использование 10 Минутной Почты! ⏰</p>
+            </div>
+            
+            <div class="mt-6">
+              <button 
+                onclick="hideWelcomeMessage()" 
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+              >
+                Понятно!
+              </button>
+            </div>
         </div>
       </div>
     </div>
@@ -1200,7 +1070,7 @@
     <script>
       function showWarning() {
         alert(
-          "⚠️ Этот проект предназначен исключительно для образовательных целей. Мы не разрешаем использовать этот проект для любой нелегальной деятельности. Мы не несем ответственности за любое возможное событие. Этот проект использует API mail.gw для создания временных адресов электронной почты. Пожалуйста, используйте его законно и ответственно ⚠️"
+          "⚠️ Этот проект предназначен исключительно для образовательных целей. Мы не разрешаем делать незаконные вещи с этим проектом, и мы не несем ответственности за любые инциденты, которые могут произойти. Этот проект использует API mail.gw для создания временных email адресов. Используйте его законно и ответственно ⚠️"
         );
       }
     </script>
@@ -1261,10 +1131,10 @@
           console.log(
             `User rated the new UI as: ${selectedRating} out of 5`
           );
-          alert("Спасибо за ваш отзыв!");
+          alert("Thank you for your feedback!");
           document.querySelector(".poll").style.display = "none";
         } else {
-          alert("Пожалуйста, выберите оценку перед отправкой.");
+          alert("Please select a rating before submitting.");
         }
       }
 
@@ -1357,7 +1227,7 @@
       }
     </script>
 
-    <script src="../js/config.js" type="module"></script>
-    <script src="../js/api-ru.js" type="module"></script>
+    <script src="js/config.js" type="module"></script>
+    <script src="js/api.js" type="module"></script>
   </body>
-</html> 
+</html>
