@@ -16,6 +16,11 @@
   <changefreq>daily</changefreq>
 </url>
 <url>
+  <loc>https://tempmailto.online/es/</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
   <loc>http://tempmailto.online/5minutemail</loc>
   <priority>1.0</priority>
   <changefreq>daily</changefreq>
